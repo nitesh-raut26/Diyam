@@ -173,13 +173,13 @@ function CategoryCard({ cat, large = false }) {
         <div className={`absolute inset-0 bg-gradient-to-t ${cat.gradient}`} />
 
         {/* Content overlaid on the image */}
-        <div className="absolute inset-0 flex flex-col justify-end p-6">
-          <div className="flex items-center gap-3 mb-2">
-            <span className={`text-cyan-400 ${large ? 'w-9 h-9' : 'w-7 h-7'} flex-shrink-0`}>
-              <IconComponent size={large ? 36 : 28} />
+        <div className={`absolute inset-0 flex flex-col justify-end ${large ? 'p-6' : 'p-3 sm:p-5'}`}>
+          <div className={`flex items-center mb-2 ${large ? 'gap-3' : 'gap-2 sm:gap-3'}`}>
+            <span className={`text-cyan-400 flex-shrink-0 ${large ? 'w-9 h-9' : 'w-6 h-6 sm:w-7 sm:h-7'}`}>
+              <IconComponent size={large ? 36 : 24} />
             </span>
-            <div>
-              <h3 className={`font-cinzel font-bold text-white leading-tight ${large ? 'text-xl' : 'text-base'}`}>
+            <div className="min-w-0">
+              <h3 className={`font-cinzel font-bold text-white leading-tight line-clamp-2 ${large ? 'text-xl' : 'text-[11px] sm:text-sm'}`}>
                 {cat.name}
               </h3>
               <p className="font-inter text-white/70 text-[10px] sm:text-xs mt-0.5">{cat.description}</p>

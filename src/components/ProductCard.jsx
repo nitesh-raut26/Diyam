@@ -62,7 +62,7 @@ export default function ProductCard({ product, index = 0 }) {
               src={product.image}
               alt={product.name}
               onError={() => setImgError(true)}
-              className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-108"
+              className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-108 mix-blend-multiply"
               loading="lazy"
               style={{ transition: 'transform 0.5s ease' }}
             />

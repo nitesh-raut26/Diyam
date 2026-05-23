@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { categories, products } from '../data/products'
+import { categories, products, baseProducts } from '../data/products'
 import ProductCard from '../components/ProductCard'
 
 // Pre-loaded premium studio image options
@@ -22,6 +22,11 @@ export default function AdminPage() {
   const [pin, setPin] = useState('')
   const [pinError, setPinError] = useState(false)
   const [customProducts, setCustomProducts] = useState([])
+  const [hiddenIds, setHiddenIds] = useState([])
+  const [priceOverrides, setPriceOverrides] = useState({})
+  const [editingId, setEditingId] = useState(null)
+  const [editingPrice, setEditingPrice] = useState('')
+  const [showHidden, setShowHidden] = useState(false)
   const [successMsg, setSuccessMsg] = useState('')
 
   // Form State
@@ -43,22 +48,24 @@ export default function AdminPage() {
     tags: '',
   })
 
-  // Load custom products from localStorage
   useEffect(() => {
     try {
       const stored = localStorage.getItem('diyam_custom_products')
-      if (stored) {
-        setCustomProducts(JSON.parse(stored))
-      }
-    } catch (e) {
-      console.error(e)
-    }
+      if (stored) setCustomProducts(JSON.parse(stored))
+    } catch (e) { console.error(e) }
 
-    // Check if session authenticated
+    try {
+      const hidden = localStorage.getItem('diyam_hidden_products')
+      if (hidden) setHiddenIds(JSON.parse(hidden))
+    } catch (e) {}
+
+    try {
+      const overrides = localStorage.getItem('diyam_price_overrides')
+      if (overrides) setPriceOverrides(JSON.parse(overrides))
+    } catch (e) {}
+
     const sessionAuth = sessionStorage.getItem('diyam_admin_authenticated')
-    if (sessionAuth === 'true') {
-      setIsAuthenticated(true)
-    }
+    if (sessionAuth === 'true') setIsAuthenticated(true)
   }, [])
 
   // Lockscreen PIN entry
@@ -177,18 +184,58 @@ export default function AdminPage() {
     }
   }
 
-  // Reset all
-  const handleResetDefaults = () => {
-    if (window.confirm('Are you sure you want to reset all custom products? This will restore original website products.')) {
-      localStorage.removeItem('diyam_custom_products')
-      setCustomProducts([])
-      setSuccessMsg('Restored to defaults!')
-      setTimeout(() => {
-        setSuccessMsg('')
-        window.location.reload()
-      }, 1000)
+  // Hide a base product (adds its ID to the hidden list)
+  const handleHideProduct = (id) => {
+    if (window.confirm('Remove this product from the website? You can restore it later.')) {
+      const updated = [...hiddenIds, id]
+      setHiddenIds(updated)
+      localStorage.setItem('diyam_hidden_products', JSON.stringify(updated))
+      setSuccessMsg('Product hidden from website.')
+      setTimeout(() => { setSuccessMsg(''); window.location.reload() }, 1200)
     }
   }
+
+  // Restore a hidden product
+  const handleRestoreProduct = (id) => {
+    const updated = hiddenIds.filter(hid => hid !== id)
+    setHiddenIds(updated)
+    localStorage.setItem('diyam_hidden_products', JSON.stringify(updated))
+    setSuccessMsg('Product restored!')
+    setTimeout(() => { setSuccessMsg(''); window.location.reload() }, 1200)
+  }
+
+  // Save inline price edit
+  const handleSavePrice = (id) => {
+    if (!editingPrice.trim()) return
+    const updated = { ...priceOverrides, [id]: editingPrice.trim() }
+    setPriceOverrides(updated)
+    localStorage.setItem('diyam_price_overrides', JSON.stringify(updated))
+    setEditingId(null)
+    setEditingPrice('')
+    setSuccessMsg('Price updated!')
+    setTimeout(() => { setSuccessMsg(''); window.location.reload() }, 1200)
+  }
+
+  // Reset all
+  const handleResetDefaults = () => {
+    if (window.confirm('Reset everything? This removes all custom products, price edits, and restores hidden products.')) {
+      localStorage.removeItem('diyam_custom_products')
+      localStorage.removeItem('diyam_hidden_products')
+      localStorage.removeItem('diyam_price_overrides')
+      setCustomProducts([])
+      setHiddenIds([])
+      setPriceOverrides({})
+      setSuccessMsg('Restored to defaults!')
+      setTimeout(() => { setSuccessMsg(''); window.location.reload() }, 1000)
+    }
+  }
+
+  // All products for the manage table (base + custom, with hidden flag)
+  const customIdSet = new Set(customProducts.map(p => p.id))
+  const allProductsForAdmin = [
+    ...baseProducts.map(p => ({ ...p, isCustom: false, isHidden: hiddenIds.includes(p.id) })),
+    ...customProducts.map(p => ({ ...p, isCustom: true, isHidden: false })),
+  ].filter(p => showHidden || !p.isHidden)
 
   // Generate live product preview object
   const previewProduct = {
@@ -319,11 +366,12 @@ export default function AdminPage() {
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 flex flex-col justify-between">
-                <span className="text-xs text-slate-400 font-medium tracking-wider uppercase">Total Products</span>
+                <span className="text-xs text-slate-400 font-medium tracking-wider uppercase">Visible Products</span>
                 <span className="text-3xl font-cinzel font-bold text-white mt-2">{products.length} Items</span>
+                {hiddenIds.length > 0 && <span className="text-[11px] text-amber-400 mt-1">{hiddenIds.length} hidden</span>}
               </div>
               <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 flex flex-col justify-between">
-                <span className="text-xs text-slate-400 font-medium tracking-wider uppercase">Custom Products Added</span>
+                <span className="text-xs text-slate-400 font-medium tracking-wider uppercase">Custom Products</span>
                 <span className="text-3xl font-cinzel font-bold text-blue-400 mt-2">{customProducts.length} Items</span>
               </div>
               <div className="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 flex flex-col justify-between">
@@ -588,56 +636,100 @@ export default function AdminPage() {
 
             </div>
 
-            {/* Custom Products List Section */}
-            {customProducts.length > 0 && (
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-8 mb-12">
-                <h2 className="font-cinzel text-lg font-bold tracking-wider mb-6 text-cyan-400">
-                  Manage Custom Products ({customProducts.length})
+            {/* Manage All Products Section */}
+            <div className="bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 sm:p-8 mb-12">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+                <h2 className="font-cinzel text-lg font-bold tracking-wider text-cyan-400">
+                  Manage All Products ({allProductsForAdmin.filter(p => !p.isHidden).length} visible
+                  {hiddenIds.length > 0 && `, ${hiddenIds.length} hidden`})
                 </h2>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse text-xs">
-                    <thead>
-                      <tr className="border-b border-slate-800 text-slate-400 uppercase tracking-wider font-semibold">
-                        <th className="py-3 px-4">Image</th>
-                        <th className="py-3 px-4">Name</th>
-                        <th className="py-3 px-4">Category</th>
-                        <th className="py-3 px-4">Price</th>
-                        <th className="py-3 px-4">Badge</th>
-                        <th className="py-3 px-4 text-right">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-800/60">
-                      {customProducts.map((p) => (
-                        <tr key={p.id} className="hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3 px-4">
-                            <img src={p.image} alt={p.name} className="w-10 h-10 object-cover rounded-lg bg-slate-950 border border-slate-800" />
-                          </td>
-                          <td className="py-3 px-4 font-semibold text-slate-200">{p.name}</td>
-                          <td className="py-3 px-4 text-slate-400">{p.category}</td>
-                          <td className="py-3 px-4 font-mono text-cyan-400">{p.price}</td>
-                          <td className="py-3 px-4">
-                            {p.badge && (
-                              <span className={`px-2 py-0.5 rounded text-[10px] font-semibold text-white ${p.badgeColor}`}>
-                                {p.badge}
-                              </span>
-                            )}
-                          </td>
-                          <td className="py-3 px-4 text-right">
-                            <button
-                              onClick={() => handleDeleteProduct(p.id)}
-                              className="text-rose-400 hover:text-rose-300 font-semibold transition-colors"
-                            >
-                              Delete
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                {hiddenIds.length > 0 && (
+                  <button
+                    onClick={() => setShowHidden(v => !v)}
+                    className="px-3 py-1.5 rounded-lg border border-slate-700 text-xs font-semibold text-slate-400 hover:text-white hover:border-slate-500 transition-all"
+                  >
+                    {showHidden ? 'Hide Hidden Products' : `Show Hidden (${hiddenIds.length})`}
+                  </button>
+                )}
               </div>
-            )}
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr className="border-b border-slate-800 text-slate-400 uppercase tracking-wider font-semibold">
+                      <th className="py-3 px-3">Image</th>
+                      <th className="py-3 px-3">Name</th>
+                      <th className="py-3 px-3 hidden sm:table-cell">Category</th>
+                      <th className="py-3 px-3">Price</th>
+                      <th className="py-3 px-3 hidden sm:table-cell">Type</th>
+                      <th className="py-3 px-3 text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60">
+                    {allProductsForAdmin.map((p) => (
+                      <tr key={p.id} className={`hover:bg-slate-800/20 transition-colors ${p.isHidden ? 'opacity-40' : ''}`}>
+                        <td className="py-2 px-3">
+                          <img src={p.image} alt={p.name} className="w-10 h-10 object-cover rounded-lg bg-slate-950 border border-slate-800 flex-shrink-0" />
+                        </td>
+                        <td className="py-2 px-3 font-semibold text-slate-200 max-w-[140px]">
+                          <span className="line-clamp-2">{p.name}</span>
+                        </td>
+                        <td className="py-2 px-3 text-slate-400 hidden sm:table-cell max-w-[110px]">
+                          <span className="line-clamp-1">{p.category}</span>
+                        </td>
+                        <td className="py-2 px-3">
+                          {editingId === p.id ? (
+                            <div className="flex items-center gap-1">
+                              <input
+                                value={editingPrice}
+                                onChange={(e) => setEditingPrice(e.target.value)}
+                                onKeyDown={(e) => { if (e.key === 'Enter') handleSavePrice(p.id); if (e.key === 'Escape') setEditingId(null) }}
+                                className="bg-slate-950 border border-blue-500 rounded px-2 py-1 text-white w-24 text-xs focus:outline-none"
+                                autoFocus
+                              />
+                              <button onClick={() => handleSavePrice(p.id)} className="text-emerald-400 hover:text-emerald-300 font-bold px-1">✓</button>
+                              <button onClick={() => setEditingId(null)} className="text-slate-400 hover:text-white px-1">✕</button>
+                            </div>
+                          ) : (
+                            <span className="font-mono text-cyan-400">{priceOverrides[p.id] || p.price}</span>
+                          )}
+                        </td>
+                        <td className="py-2 px-3 hidden sm:table-cell">
+                          <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${p.isCustom ? 'bg-blue-500/15 text-blue-400' : 'bg-slate-700/60 text-slate-400'}`}>
+                            {p.isCustom ? 'Custom' : 'Base'}
+                          </span>
+                        </td>
+                        <td className="py-2 px-3 text-right">
+                          <div className="flex items-center justify-end gap-3 flex-wrap">
+                            {!p.isHidden && editingId !== p.id && (
+                              <button
+                                onClick={() => { setEditingId(p.id); setEditingPrice(priceOverrides[p.id] || p.price) }}
+                                className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+                              >
+                                Edit Price
+                              </button>
+                            )}
+                            {p.isHidden ? (
+                              <button onClick={() => handleRestoreProduct(p.id)} className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors">
+                                Restore
+                              </button>
+                            ) : p.isCustom ? (
+                              <button onClick={() => handleDeleteProduct(p.id)} className="text-rose-400 hover:text-rose-300 font-semibold transition-colors">
+                                Delete
+                              </button>
+                            ) : (
+                              <button onClick={() => handleHideProduct(p.id)} className="text-amber-400 hover:text-amber-300 font-semibold transition-colors">
+                                Hide
+                              </button>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
             {/* Success Banner Toast Overlay */}
             <AnimatePresence>

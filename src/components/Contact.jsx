@@ -49,8 +49,8 @@ function LightSVG() {
 
 const contactInfo = [
   { Icon: PhoneIcon, label: 'Phone', value: '+91 95993 01369', href: 'tel:+919599301369' },
-  { Icon: MailIcon, label: 'Email', value: 'contactlightsbazar@gmail.com', href: 'mailto:contactlightsbazar@gmail.com' },
-  { Icon: MapPinIcon, label: 'Address', value: 'Shop No-52, 1st floor, AVL36GURGAON', href: '#' },
+  { Icon: MailIcon, label: 'Email', value: 'diyamlights@gmail.com', href: 'mailto:diyamlights@gmail.com' },
+  { Icon: MapPinIcon, label: 'Address', value: '1st floor, AVL36GURGAON', href: '#' },
   { Icon: ClockIcon, label: 'Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM IST', href: '#' },
 ]
 

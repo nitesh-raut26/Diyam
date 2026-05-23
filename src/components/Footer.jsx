@@ -117,7 +117,7 @@ export default function Footer() {
               <div>
                 <span className="font-cinzel font-bold text-2xl tracking-widest block text-white">DIYAM</span>
                 <div className="text-cyan-400/90 text-[8px] tracking-[0.18em] uppercase font-inter mt-0.5">
-                  Shop 52, AVL36, Gurugram
+                  1st Floor, AVL36, Gurugram
                 </div>
               </div>
             </Link>
@@ -222,29 +222,29 @@ export default function Footer() {
                 <PhoneIcon />
                 <span>+91 95993 01369</span>
               </a>
-              <a href="mailto:contactlightsbazar@gmail.com" className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors text-sm font-inter">
+              <a href="mailto:diyamlights@gmail.com" className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors text-sm font-inter">
                 <MailIcon />
-                <span>contactlightsbazar@gmail.com</span>
+                <span>diyamlights@gmail.com</span>
               </a>
               <div className="flex items-start gap-2 text-slate-400 text-sm font-inter mt-1 leading-relaxed">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 mt-0.5 flex-shrink-0 text-cyan-400/90">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>Shop No-52, 1st floor, AVL36GURGAON</span>
+                <span>1st floor, AVL36GURGAON</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-slate-900 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-slate-900 pt-6 pb-20 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-inter text-slate-500 text-xs text-center sm:text-left">
             © {new Date().getFullYear()} DIYAM — diyam.in. All rights reserved. Gurugram, Haryana, India.{' '}
             <Link to="/admin" className="text-slate-600 hover:text-cyan-400 font-medium transition-colors ml-1">
               Admin Portal
             </Link>
           </p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-x-5 gap-y-2">
             {['Privacy Policy', 'Terms of Service', 'Shipping Policy'].map((item) => (
               <span key={item} className="font-inter text-slate-500 text-xs hover:text-cyan-400 cursor-pointer transition-colors">
                 {item}

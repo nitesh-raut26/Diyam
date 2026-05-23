@@ -7,6 +7,161 @@ export const WHATSAPP_MSG = encodeURIComponent(
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
 
 const baseProducts = [
+  // ── New Premium Lighting Collection (Upper Row) ───────────────
+  {
+    id: 101,
+    name: 'FB Delta Spot Light',
+    category: 'Led Spot Lights',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-indigo-700',
+    wattage: '15W',
+    usage: 'Indoor Ceiling Spotlight',
+    colorTemp: '3000K/4000K/6500K',
+    material: 'Aluminium',
+    moq: '10 Pieces',
+    description: 'Premium recessed LED ceiling spotlight with anti-glare technology and adjustable beam angle. Sleek and robust aluminium design suitable for luxury homes, showrooms, and commercial lobbies.',
+    image: '/products/FBDeltaSpotLight.jpeg',
+    tags: ['15W', 'Anti-Glare', 'Philips Drive'],
+    inquiry: 'I am interested in the FB Delta Spot Light. Please share specifications and pricing.',
+  },
+  {
+    id: 102,
+    name: 'FB Track Light',
+    category: 'LED Track Light',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-slate-700',
+    wattage: '30W',
+    usage: 'Commercial Track Accent',
+    colorTemp: '4000K/6500K',
+    material: 'Aluminium',
+    moq: '5 Pieces',
+    description: 'High-intensity adjustable LED track spotlight with premium COB technology. Perfect direction-controlled accent lighting for modern retail stores, boutiques, art galleries, and exhibition halls.',
+    image: '/products/FbTrack.jpeg',
+    tags: ['30W', 'COB', 'Philips Drive'],
+    inquiry: 'I am interested in the FB Track Light. Please share specifications and pricing.',
+  },
+  {
+    id: 103,
+    name: 'Diyam Premium Focus Light',
+    category: 'LED Focus Light',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-green-700',
+    wattage: '50W',
+    usage: 'Outdoor Facade & Landscape',
+    colorTemp: '6000K',
+    material: 'Die-Cast Aluminium',
+    moq: '2 Pieces',
+    description: 'Heavy-duty 50W outdoor LED focus light featuring durable Philips Driver. Highly robust weatherproofing with die-cast aluminium casing. Engineered for high-intensity facade highlights, parks, and billboard illumination.',
+    image: '/products/FocusLight.jpeg',
+    tags: ['50W', 'Outdoor', 'Philips Drive'],
+    inquiry: 'I am interested in the Diyam Premium Focus Light. Please share specifications and pricing.',
+  },
+  {
+    id: 104,
+    name: 'Glaza Premium Spotlight',
+    category: 'Led Spot Lights',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-indigo-700',
+    wattage: '12W',
+    usage: 'Minimalist Wall Accent',
+    colorTemp: '3000K/4000K',
+    material: 'Aluminium',
+    moq: '10 Pieces',
+    description: 'Architectural-grade minimalist LED spotlight. Features exceptional thermal management, anti-glare reflector, and high-purity aluminium body for precise and comfortable accent lighting.',
+    image: '/products/Glaza.jpeg',
+    tags: ['12W', 'Anti-Glare', 'Philips Drive'],
+    inquiry: 'I am interested in the Glaza Premium Spotlight. Please share specifications and pricing.',
+  },
+  {
+    id: 105,
+    name: 'Glaza 12W Ellipse Downlight',
+    category: 'LED Downlight',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-cyan-700',
+    wattage: '12W',
+    usage: 'Indoor Ceiling Downlight',
+    colorTemp: '4000K',
+    material: 'Aluminium',
+    moq: '10 Pieces',
+    description: 'Premium recessed elliptical ceiling downlight designed for uniform, flicker-free light distribution. Clean aesthetic contour blends flawlessly with modern residential or corporate false ceilings.',
+    image: '/products/Glaza12wellipse.jpeg',
+    tags: ['12W', 'Ellipse', 'Philips Drive'],
+    inquiry: 'I am interested in the Glaza 12W Ellipse Downlight. Please share specifications and pricing.',
+  },
+  {
+    id: 106,
+    name: 'Gloria Track Light',
+    category: 'LED Track Light',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-slate-700',
+    wattage: '20W',
+    usage: 'Modern Track Spotlight',
+    colorTemp: '3000K/4000K',
+    material: 'Aluminium',
+    moq: '5 Pieces',
+    description: 'Elegant and lightweight 20W LED track light. Employs advanced optical lens for precise beam control and a beautiful gradient falloff. Excellent for upscale showrooms, hotel lobbies, and styling studios.',
+    image: '/products/GloriaTracklight.jpeg',
+    tags: ['20W', 'Precise Beam', 'Philips Drive'],
+    inquiry: 'I am interested in the Gloria Track Light. Please share specifications and pricing.',
+  },
+  {
+    id: 107,
+    name: 'Pesto Laser Spotlight',
+    category: 'Led Spot Lights',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-indigo-700',
+    wattage: '10W',
+    usage: 'Narrow Beam Laser Focus',
+    colorTemp: '3000K/4000K/6500K',
+    material: 'Aluminium',
+    moq: '5 Pieces',
+    description: 'Ultra-narrow beam laser-effect spotlight offering exceptionally sharp point-focus illumination. Perfect for spotlighting singular objects, architectural pillars, high-end retail displays, and museum exhibits.',
+    image: '/products/PestoLaser.jpeg',
+    tags: ['10W', 'Narrow Beam', 'Philips Drive'],
+    inquiry: 'I am interested in the Pesto Laser Spotlight. Please share specifications and pricing.',
+  },
+  {
+    id: 108,
+    name: 'Diyam Classic Track Light',
+    category: 'LED Track Light',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-slate-700',
+    wattage: '24W',
+    usage: 'Commercial Track Accent',
+    colorTemp: '4000K',
+    material: 'Aluminium',
+    moq: '5 Pieces',
+    description: 'Classic durable track spotlight built for heavy-duty commercial service. Excellent color rendering index (CRI > 90) to display true colors in commercial boutiques and gallery exhibitions.',
+    image: '/products/Tracklight.jpeg',
+    tags: ['24W', 'CRI > 90', 'Philips Drive'],
+    inquiry: 'I am interested in the Diyam Classic Track Light. Please share specifications and pricing.',
+  },
+  {
+    id: 109,
+    name: 'Tricolor Ring Downlight',
+    category: 'LED Downlight',
+    price: 'Contact Me',
+    badge: 'Philips Drive',
+    badgeColor: 'bg-cyan-700',
+    wattage: '16W',
+    usage: 'Smart Tricolor Ceiling Downlight',
+    colorTemp: '3-in-1 Tunable',
+    material: 'Aluminium',
+    moq: '5 Pieces',
+    description: 'Smart tunable 16W ceiling downlight with 3-in-1 tricolor switching capability. Easily toggle between Cool White, Warm White, and Natural White to customize the room atmosphere on demand.',
+    image: '/products/tricolorring.jpeg',
+    tags: ['16W', 'Tricolor', 'Philips Drive'],
+    inquiry: 'I am interested in the Tricolor Ring Downlight. Please share specifications and pricing.',
+  },
+
   // ── Led Light ──────────────────────────────────────────────────
   {
     id: 1,
@@ -92,7 +247,7 @@ const baseProducts = [
     name: 'Led Strip Driver',
     category: 'Led Light',
     price: '₹415/Piece',
-    badge: 'Waterproof',
+    badge: 'Philips Driver',
     badgeColor: 'bg-teal-700',
     wattage: '50W',
     outputCurrent: '5A',
@@ -398,10 +553,10 @@ const baseProducts = [
   // ── Led Driver ────────────────────────────────────────────────
   {
     id: 23,
-    name: 'Waterproof LED Driver (50W)',
+    name: 'Philips Driver LED Driver (50W)',
     category: 'Led Driver',
     price: '₹290/Piece',
-    badge: 'Waterproof',
+    badge: 'Philips Drive',
     badgeColor: 'bg-teal-700',
     wattage: '50W',
     outputCurrent: '700mA',
@@ -409,10 +564,10 @@ const baseProducts = [
     inputVoltage: '12V',
     outputVoltage: '12V',
     usage: 'LED Street Light',
-    description: '50W Waterproof LED Driver, 700mA output, 12V input/output. Plastic enclosure. For LED street lights. IP-rated for outdoor and harsh environment use.',
+    description: '50W Philips Drive LED Driver, 700mA output, 12V input/output. Plastic enclosure. For LED street lights. IP-rated for outdoor and harsh environment use.',
     image: '/products/waterproof-led-driver-50w.jpg',
-    tags: ['50W', '700mA', 'Waterproof'],
-    inquiry: 'I am interested in the Waterproof LED Driver (50W/700mA). Please share specifications and pricing.',
+    tags: ['50W', '700mA', 'Philips Drive'],
+    inquiry: 'I am interested in the Philips Drive LED Driver (50W/700mA). Please share specifications and pricing.',
   },
   {
     id: 24,
@@ -716,18 +871,36 @@ const baseProducts = [
   },
 ];
 
-// Load custom products from localStorage
+export { baseProducts };
+
 const getCustomProducts = () => {
   try {
     const stored = typeof window !== 'undefined' ? localStorage.getItem('diyam_custom_products') : null;
     return stored ? JSON.parse(stored) : [];
-  } catch (e) {
-    console.error('Error loading custom products', e);
-    return [];
-  }
+  } catch (e) { return []; }
 };
 
-export const products = [...baseProducts, ...getCustomProducts()];
+const getHiddenProductIds = () => {
+  try {
+    const stored = typeof window !== 'undefined' ? localStorage.getItem('diyam_hidden_products') : null;
+    return stored ? JSON.parse(stored) : [];
+  } catch (e) { return []; }
+};
+
+const getPriceOverrides = () => {
+  try {
+    const stored = typeof window !== 'undefined' ? localStorage.getItem('diyam_price_overrides') : null;
+    return stored ? JSON.parse(stored) : {};
+  } catch (e) { return {}; }
+};
+
+export const products = (() => {
+  const hidden = getHiddenProductIds();
+  const overrides = getPriceOverrides();
+  return [...baseProducts, ...getCustomProducts()]
+    .filter(p => !hidden.includes(p.id))
+    .map(p => overrides[p.id] ? { ...p, price: overrides[p.id] } : p);
+})();
 
 const baseCategories = [
   {
@@ -769,7 +942,7 @@ const baseCategories = [
   {
     id: 5,
     name: 'Led Driver',
-    description: 'Waterproof, AC-DC & street light drivers',
+    description: 'Philips Drive, AC-DC & street light drivers',
     count: '3 Products',
     iconKey: 'specialty',
     gradient: 'from-slate-900/90 via-slate-900/40 to-transparent',
@@ -976,7 +1149,7 @@ export const features = [
   {
     iconKey: 'quality',
     title: 'Premium Quality',
-    description: 'All products meet IS & CE quality standards with rigorous testing for long-term reliability.',
+    description: 'All products meet global quality standards with rigorous testing for long-term reliability.',
   },
   {
     iconKey: 'energy',

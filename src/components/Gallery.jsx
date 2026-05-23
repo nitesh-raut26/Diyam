@@ -16,12 +16,12 @@ function LightIcon({ color }) {
   )
 }
 
-export default function Gallery({ limit = 9 }) {
+export default function Gallery({ limit = 9, compact = false }) {
   const [lightbox, setLightbox] = useState(null)
   const images = galleryImages.slice(0, limit)
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden bg-white">
+    <section className={`${compact ? 'pt-6 pb-24' : 'py-24'} px-6 relative overflow-hidden bg-white`}>
       <div className="absolute inset-0 pointer-events-none glow-center opacity-30" />
 
       <div className="max-w-7xl mx-auto">

@@ -58,8 +58,8 @@ const quickOptions = [
   {
     Icon: MailIcon,
     title: 'Email',
-    sub: 'contactlightsbazar@gmail.com',
-    href: 'mailto:contactlightsbazar@gmail.com',
+    sub: 'diyamlights@gmail.com',
+    href: 'mailto:diyamlights@gmail.com',
     color: 'from-blue-50 to-indigo-50',
     border: 'border-blue-200',
     textColor: 'text-blue-700',
@@ -138,7 +138,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-cinzel font-bold text-brand-600 text-xl mb-3">Our Location</h3>
                 <p className="font-inter text-gray-800 text-base font-semibold mb-1">
-                  Shop No-52, 1st floor, AVL36GURGAON
+                  1st floor, AVL36GURGAON
                 </p>
                 <p className="font-inter text-gray-500 text-xs tracking-wide uppercase mb-3">
                   Haryana, India

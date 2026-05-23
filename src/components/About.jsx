@@ -124,7 +124,7 @@ export default function About() {
 
             <ScrollReveal delay={0.2}>
               <div className="flex flex-wrap gap-4 mb-10">
-                {['CE & IS Certified', '2-Year Warranty', 'Pan-India Supply', 'Expert Guidance'].map((tag) => (
+                {['2-Year Warranty', 'Pan-India Supply', 'Expert Guidance'].map((tag) => (
                   <span key={tag} className="bg-white border border-slate-200/80 px-4 py-2 rounded-full text-brand-600 text-sm font-inter font-medium shadow-sm">
                     ✦ {tag}
                   </span>

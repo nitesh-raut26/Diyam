@@ -140,7 +140,7 @@ export default function ProductDetailPage() {
                       src={product.image}
                       alt={product.name}
                       onError={() => setImgError(true)}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply"
                       loading="eager"
                     />
                   ) : (
@@ -165,7 +165,7 @@ export default function ProductDetailPage() {
                   {[
                     { icon: '🛡️', title: '2-Year Warranty', desc: '100% replacement' },
                     { icon: '⚡', title: 'Energy Efficient', desc: 'Saves up to 80%' },
-                    { icon: '✅', title: 'Quality Standards', desc: 'CE & IS certified' },
+                    { icon: '🚚', title: 'Pan-India Supply', desc: 'Quick safe delivery' },
                   ].map((tb) => (
                     <div key={tb.title} className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-center">
                       <span className="text-xl block mb-1">{tb.icon}</span>
