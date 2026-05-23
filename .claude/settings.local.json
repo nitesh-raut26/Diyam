@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.indiamart.com)",
+      "Bash(curl -s -o indoor-led-light-16w.jpg \"https://5.imimg.com/data5/SELLER/Default/2023/5/308570675/VW/VW/WG/164031933/16w-indoor-led-light-500x500.jpg\")",
+      "Bash(curl -s -o philips-constant-driver-24v-60w.jpg \"https://5.imimg.com/data5/ANDROID/Default/2024/1/377942472/DL/VW/CL/164031933/product-jpeg-500x500.jpg\")",
+      "Bash(curl -s -o cob-led-downlight-15w.jpg \"https://5.imimg.com/data5/ANDROID/Default/2023/6/315984414/GD/UL/BL/164031933/product-jpeg-500x500.jpg\")",
+      "Bash(curl -s -o certa-drive-philips-40w.jpg \"https://5.imimg.com/data5/ANDROID/Default/2023/8/336049430/ST/NF/MN/164031933/product-jpeg-500x500.jpg\")",
+      "Bash(curl -s -o certa-drive-philips-10w.jpg \"https://5.imimg.com/data5/ANDROID/Default/2023/8/336049893/UF/ND/KU/164031933/product-jpeg-500x500.jpg\")"
+    ]
+  }
+}
