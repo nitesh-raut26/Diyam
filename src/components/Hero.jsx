@@ -18,28 +18,6 @@ const features = [
 
 const focusLightThemes = [
   {
-    id: 1, name: 'FB Delta Spot Light', image: '/products/FBDeltaSpotLight.jpeg',
-    gradient: 'linear-gradient(135deg, #1E40AF 0%, #2563EB 40%, #06B6D4 70%, #22D3EE 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(37,99,235,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#2563EB', glowRgb: '37,99,235',
-    tagline: 'Precision anti-glare ceiling spotlight',
-  },
-  {
-    id: 2, name: 'FB Track Light', image: '/products/FbTrack.jpeg',
-    gradient: 'linear-gradient(135deg, #4F46E5 0%, #6366F1 40%, #818CF8 70%, #C7D2FE 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(99,102,241,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(129,140,248,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#6366F1', glowRgb: '99,102,241',
-    tagline: 'High-intensity directional display spotlight',
-  },
-  {
     id: 3, name: 'Diyam Focus Light', image: '/products/FocusLight.jpeg',
     gradient: 'linear-gradient(135deg, #15803D 0%, #16A34A 40%, #4ADE80 70%, #DCFCE7 100%)',
     bgGlows: [
@@ -49,72 +27,6 @@ const focusLightThemes = [
     ],
     accentColor: '#16A34A', glowRgb: '22,163,74',
     tagline: 'Heavy-duty weatherproof facade & garden focus',
-  },
-  {
-    id: 4, name: 'Glaza Premium Spotlight', image: '/products/Glaza.jpeg',
-    gradient: 'linear-gradient(135deg, #7C3AED 0%, #8B5CF6 40%, #A78BFA 70%, #DDD6FE 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(139,92,246,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(167,139,250,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#8B5CF6', glowRgb: '139,92,246',
-    tagline: 'Architectural-grade minimalist spotlighting',
-  },
-  {
-    id: 5, name: 'Glaza Ellipse Downlight', image: '/products/Glaza12wellipse.jpeg',
-    gradient: 'linear-gradient(135deg, #0891B2 0%, #06B6D4 40%, #22D3EE 70%, #ECFEFF 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(6,182,212,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(8,145,178,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(34,211,238,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#06B6D4', glowRgb: '6,182,212',
-    tagline: 'Elegant elliptical contour recessed lighting',
-  },
-  {
-    id: 6, name: 'Gloria Track Light', image: '/products/GloriaTracklight.jpeg',
-    gradient: 'linear-gradient(135deg, #475569 0%, #64748B 40%, #94A3B8 70%, #CBD5E1 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(100,116,139,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(71,85,105,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(148,163,184,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#94A3B8', glowRgb: '148,163,184',
-    tagline: 'Luxury high-efficiency showroom styling track',
-  },
-  {
-    id: 7, name: 'Pesto Laser Spotlight', image: '/products/PestoLaser.jpeg',
-    gradient: 'linear-gradient(135deg, #B45309 0%, #D97706 40%, #F59E0B 70%, #FEF3C7 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(217,119,6,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(180,83,9,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#D97706', glowRgb: '217,119,6',
-    tagline: 'Ultra-narrow point-focus laser spotlighting',
-  },
-  {
-    id: 8, name: 'Diyam Track Light', image: '/products/Tracklight.jpeg',
-    gradient: 'linear-gradient(135deg, #BE123C 0%, #E11D48 40%, #F43F5E 70%, #FFE4E6 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(225,29,72,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(190,18,60,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(244,63,94,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#E11D48', glowRgb: '225,29,72',
-    tagline: 'Heavy-duty commercial exhibition track spotlight',
-  },
-  {
-    id: 9, name: 'Tricolor Ring Downlight', image: '/products/tricolorring.jpeg',
-    gradient: 'linear-gradient(135deg, #0D9488 0%, #14B8A6 40%, #2DD4BF 70%, #F0FDFA 100%)',
-    bgGlows: [
-      'radial-gradient(ellipse 80% 60% at 50% 10%, rgba(20,184,166,0.12) 0%, transparent 60%)',
-      'radial-gradient(circle, rgba(13,148,136,0.15) 0%, transparent 70%)',
-      'radial-gradient(circle, rgba(45,212,191,0.12) 0%, transparent 70%)',
-    ],
-    accentColor: '#14B8A6', glowRgb: '20,184,166',
-    tagline: '3-in-1 smart tunable color-shifting ceiling downlight',
   },
 ]
 
@@ -296,7 +208,7 @@ export default function Hero() {
                 textShadow: `0 0 35px rgba(${rgb},0.95), 0 0 70px rgba(${rgb},0.55), 0 0 110px rgba(${rgb},0.25)`,
                 filter: 'drop-shadow(0 0 18px rgba(255,255,255,0.55))',
               } : {
-                background: activeTheme.gradient,
+                background: 'linear-gradient(135deg, #1E40AF 0%, #2563EB 40%, #06B6D4 70%, #22D3EE 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -327,69 +239,70 @@ export default function Hero() {
           From COB downlights to track systems — crafted for excellence.
         </motion.p>
 
-        {/* Theme Selector */}
+        {/* Focus Light Showcase — banner style */}
         <motion.div
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-6 mb-10 max-w-4xl mx-auto"
+          className="mt-6 mb-10 w-full max-w-2xl mx-auto"
         >
-          <p className="text-[10px] font-inter uppercase tracking-[0.25em] mb-4"
+          <p className="text-[10px] font-inter uppercase tracking-[0.25em] mb-5"
             style={{ color: isIlluminated ? 'rgba(255,255,255,0.45)' : '#94a3b8' }}>
             ✦ Click to Illuminate — Click Same to Toggle Off ✦
           </p>
-          <div className="flex flex-wrap justify-center gap-3.5 px-4">
-            {focusLightThemes.map((theme, i) => {
-              const isActive = activeThemeIndex === i
-              return (
-                <motion.button
-                  key={theme.id}
-                  whileHover={{ scale: 1.1, y: -4 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => handleThemeClick(i)}
-                  className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 transition-all p-1 flex items-center justify-center cursor-pointer"
+
+          {/* Banner image — full, no crop, no text */}
+          <motion.button
+            whileTap={{ scale: 0.985 }}
+            onClick={() => handleThemeClick(0)}
+            className="relative w-full cursor-pointer rounded-3xl overflow-hidden block"
+            style={{
+              filter: isIlluminated
+                ? `drop-shadow(0 0 50px rgba(${activeTheme.glowRgb},0.9)) drop-shadow(0 0 100px rgba(${activeTheme.glowRgb},0.45))`
+                : 'drop-shadow(0 6px 20px rgba(0,0,0,0.12))',
+              transition: 'filter 0.7s ease',
+            }}
+          >
+            {/* Full image — natural size, zero crop */}
+            <img
+              src={activeTheme.image}
+              alt={activeTheme.name}
+              className="w-full h-auto block transition-all duration-700"
+              style={{
+                filter: isIlluminated
+                  ? `brightness(1.12) saturate(1.4) contrast(1.06)`
+                  : 'brightness(0.97) saturate(1)',
+                transform: isIlluminated ? 'scale(1.04)' : 'scale(1)',
+                transformOrigin: 'top center',
+              }}
+            />
+
+            {/* Radial colour-matched glow — only when ON */}
+            {isIlluminated && (
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: `radial-gradient(ellipse 80% 55% at 50% 20%, rgba(${activeTheme.glowRgb},0.28) 0%, transparent 65%)`,
+                  mixBlendMode: 'screen',
+                }}
+              />
+            )}
+
+            {/* Tap hint — only when OFF, fades away on illuminate */}
+            {!isIlluminated && (
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span
+                  className="text-[10px] font-inter font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-full"
                   style={{
-                    background: isIlluminated ? 'rgba(10,18,28,0.7)' : (isActive ? '#ffffff' : '#f8fafc'),
-                    borderColor: isActive ? theme.accentColor : (isIlluminated ? 'rgba(255,255,255,0.1)' : '#e2e8f0'),
-                    boxShadow: isActive
-                      ? (isIlluminated
-                          ? `0 0 22px rgba(${theme.glowRgb},0.7), 0 8px 20px rgba(${theme.glowRgb},0.3)`
-                          : `0 10px 25px ${theme.accentColor}28`)
-                      : 'none',
-                    transform: isActive ? 'scale(1.06)' : 'scale(1)',
+                    background: 'rgba(0,0,0,0.35)',
+                    color: 'rgba(255,255,255,0.9)',
+                    border: '1px solid rgba(255,255,255,0.25)',
+                    backdropFilter: 'blur(6px)',
                   }}
                 >
-                  <img
-                    src={theme.image} alt={theme.name}
-                    className="w-full h-full object-contain p-0.5"
-                    style={{ mixBlendMode: isIlluminated ? 'normal' : 'multiply' }}
-                  />
-                  {isActive && (
-                    <span className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full animate-pulse"
-                      style={{ backgroundColor: theme.accentColor, boxShadow: isIlluminated ? `0 0 8px ${theme.accentColor}` : 'none' }}
-                    />
-                  )}
-                  {isActive && isIlluminated && (
-                    <div className="absolute inset-0 rounded-2xl pointer-events-none"
-                      style={{ boxShadow: `inset 0 0 14px rgba(${theme.glowRgb},0.4)` }} />
-                  )}
-                </motion.button>
-              )
-            })}
-          </div>
-
-          {/* Active tagline */}
-          <div className="h-6 mt-4 flex items-center justify-center">
-            <motion.span
-              key={`${activeThemeIndex}-${isIlluminated}`}
-              initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }}
-              className="text-xs font-semibold font-inter tracking-wider"
-              style={{
-                color: activeTheme.accentColor,
-                textShadow: isIlluminated ? `0 0 12px rgba(${rgb},0.85)` : 'none',
-              }}
-            >
-              {isIlluminated ? '💡' : '✦'} {activeTheme.name} — {activeTheme.tagline} {isIlluminated ? '💡' : '✦'}
-            </motion.span>
-          </div>
+                  ◎ &nbsp;Click to Illuminate
+                </span>
+              </div>
+            )}
+          </motion.button>
         </motion.div>
 
         {/* Feature pills */}

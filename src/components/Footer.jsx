@@ -239,7 +239,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-slate-900 pt-6 pb-20 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-inter text-slate-500 text-xs text-center sm:text-left">
-            © {new Date().getFullYear()} DIYAM — diyam.in. All rights reserved. Gurugram, Haryana, India.{' '}
+            © {new Date().getFullYear()} DIYAM — diyam.co.in. All rights reserved. Gurugram, Haryana, India.{' '}
             <Link to="/admin" className="text-slate-600 hover:text-cyan-400 font-medium transition-colors ml-1">
               Admin Portal
             </Link>

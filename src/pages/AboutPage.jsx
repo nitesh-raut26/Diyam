@@ -37,7 +37,7 @@ const milestones = [
   { year: '2017', event: 'First Major Projects', desc: 'Supplied LED lighting for commercial offices and residential complexes across the NCR region.' },
   { year: '2019', event: 'Expanded Product Range', desc: 'Grew to 300+ LED products including track lights, COB downlights, and outdoor landscape lighting.' },
   { year: '2021', event: 'Pan-NCR Reach', desc: 'Partnered with 50+ architects and contractors. Launched 2-year replacement warranty on all products.' },
-  { year: '2024', event: '5000+ Projects Delivered', desc: 'Celebrated 5,000+ successful installations and launched diyam.in to serve customers nationwide.' },
+  { year: '2024', event: '5000+ Projects Delivered', desc: 'Celebrated 5,000+ successful installations and launched diyam.co.in to serve customers nationwide.' },
 ]
 
 export default function AboutPage() {
