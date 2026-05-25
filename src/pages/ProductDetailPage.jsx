@@ -171,10 +171,10 @@ export default function ProductDetailPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     'itemListElement': [
-      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://diyam.in/' },
-      { '@type': 'ListItem', 'position': 2, 'name': 'Products', 'item': 'https://diyam.in/products' },
-      { '@type': 'ListItem', 'position': 3, 'name': product.category, 'item': `https://diyam.in/products?category=${encodeURIComponent(product.category)}` },
-      { '@type': 'ListItem', 'position': 4, 'name': product.name, 'item': `https://diyam.in${canonicalPath}` },
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://diyam.co.in/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Products', 'item': 'https://diyam.co.in/products' },
+      { '@type': 'ListItem', 'position': 3, 'name': product.category, 'item': `https://diyam.co.in/products?category=${encodeURIComponent(product.category)}` },
+      { '@type': 'ListItem', 'position': 4, 'name': product.name, 'item': `https://diyam.co.in${canonicalPath}` },
     ],
   }
 

@@ -1,5 +1,5 @@
 # robots.txt for DIYAM Premium Lighting & Electronics
-# diyam.in | diyam.co.in
+# diyam.co.in
 # India's Premier LED Lighting Brand
 
 # === Standard Search Engine Crawlers ===
@@ -78,5 +78,4 @@ Disallow: /api/*
 Crawl-delay: 5
 
 # === Sitemaps ===
-Sitemap: https://diyam.in/sitemap.xml
 Sitemap: https://diyam.co.in/sitemap.xml
