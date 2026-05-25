@@ -47,7 +47,7 @@ export default function ProductsPage() {
     <>
       <SEO 
         title="Premium LED & Focus Lights Catalog"
-        description="Browse the complete catalog of DIYAM (diyam.in / diyam.co.in) Premium Lighting. Discover 38+ premium products across 16 categories including waterproof LED Focus Lights, spotlights, downlights, linear systems, and high-volt drivers."
+        description="Browse the complete catalog of DIYAM (diyam.co.in / diyam.in) Premium Lighting. Discover 38+ premium products across 16 categories including waterproof LED Focus Lights, spotlights, downlights, linear systems, and high-volt drivers."
         keywords="diyam products, focus light catalog, led track lights price, buy cob downlight, waterproof led drivers"
         path="/products"
       />

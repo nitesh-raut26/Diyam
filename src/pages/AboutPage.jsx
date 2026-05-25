@@ -46,7 +46,7 @@ export default function AboutPage() {
     <>
       <SEO 
         title="About Us - Luxury LED Lighting Experts since 2015"
-        description="Learn about DIYAM (diyam.in / diyam.co.in) – India's premium LED lighting manufacturer. Discover our journey, from our founding in Gurugram to serving thousands of premium architectural projects with Focus Lights, spotlights, and smart downlights."
+        description="Learn about DIYAM (diyam.co.in / diyam.in) – India's premium LED lighting manufacturer. Discover our journey, from our founding in Gurugram to serving thousands of premium architectural projects with Focus Lights, spotlights, and smart downlights."
         keywords="about diyam, led lighting manufacturer, diyam lighting NCR, premium led supplier India, diyam lights story"
         path="/about"
       />

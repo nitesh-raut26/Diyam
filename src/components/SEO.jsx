@@ -11,7 +11,7 @@ export default function SEO({
   faqSchema = null,
 }) {
   useEffect(() => {
-    const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://diyam.in';
+    const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://diyam.co.in';
     const cleanOrigin = currentOrigin.endsWith('/') ? currentOrigin.slice(0, -1) : currentOrigin;
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
     const canonicalUrl = `${cleanOrigin}${cleanPath === '/' ? '' : cleanPath}`;
@@ -41,7 +41,7 @@ export default function SEO({
     };
 
     const defaultDesc = 'Shop premium LED Focus Lights, spotlights, downlights, track lights, and Philips Certa drivers at DIYAM. Trusted by 5000+ projects across India. Pan-India delivery, 2-year warranty.';
-    const defaultKeywords = 'DIYAM, diyam.in, diyam.co.in, LED focus light, spotlight India, LED downlight, Philips Certa driver, LED track light, buy LED lights India';
+    const defaultKeywords = 'DIYAM, diyam.co.in,diyam.in, LED focus light, spotlight India, LED downlight, Philips Certa driver, LED track light, buy LED lights India';
 
     setMeta('description', description || defaultDesc);
     setMeta('keywords', keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords);

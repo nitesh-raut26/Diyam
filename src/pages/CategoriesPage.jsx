@@ -95,7 +95,7 @@ export default function CategoriesPage() {
     <>
       <SEO 
         title="LED Product Categories"
-        description="Explore the extensive LED and electronic category list of DIYAM (diyam.in / diyam.co.in). Browse through LED Focus Lights, spotlights, track lights, downlights, drivers, linear systems, and strip modules."
+        description="Explore the extensive LED and electronic category list of DIYAM (diyam.co.in). Browse through LED Focus Lights, spotlights, track lights, downlights, drivers, linear systems, and strip modules."
         keywords="diyam categories, led lighting types, commercial led driver categories, find focus light, shop downlight"
         path="/categories"
       />

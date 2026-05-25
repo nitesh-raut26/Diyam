@@ -72,7 +72,7 @@ export default function ContactPage() {
     <>
       <SEO 
         title="Contact Us - Premium Lighting Inquiries"
-        description="Get in touch with DIYAM (diyam.in / diyam.co.in) Premium Lighting. Inquire about our heavy-duty waterproof LED Focus Lights, spotlights, and electronic drivers. WhatsApp, call, or visit our Haryana showroom."
+        description="Get in touch with DIYAM (diyam.co.in) Premium Lighting. Inquire about our heavy-duty waterproof LED Focus Lights, spotlights, and electronic drivers. WhatsApp, call, or visit our Haryana showroom."
         keywords="diyam contact, diyam haryana address, order focus lights ncr, led supplier contact, whatsapp diyam lighting"
         path="/contact"
       />

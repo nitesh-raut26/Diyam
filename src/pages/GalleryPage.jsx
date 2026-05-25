@@ -8,7 +8,7 @@ export default function GalleryPage() {
     <>
       <SEO 
         title="LED Projects Gallery - Premium Lighting Installations"
-        description="View our curated portfolio of premium architectural and landscape installations at DIYAM (diyam.in / diyam.co.in). See real-world highlights of outdoor Focus Lights, spotlights, and dynamic indoor setups."
+        description="View our curated portfolio of premium architectural and landscape installations at DIYAM (diyam.co.in). See real-world highlights of outdoor Focus Lights, spotlights, and dynamic indoor setups."
         keywords="diyam gallery, lighting projects portfolio, focus light installation, led spotlight showcase"
         path="/gallery"
       />
