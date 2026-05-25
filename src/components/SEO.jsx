@@ -1,10 +1,5 @@
 import { useEffect } from 'react';
 
-/**
- * Custom High-Performance SEO Component for Diyam (React 19 compatible)
- * Dynamically updates document metadata, canonical tags, and injects structured schemas
- * for both diyam.in and diyam.co.in domains.
- */
 export default function SEO({
   title,
   description,
@@ -12,128 +7,134 @@ export default function SEO({
   image = '/category_bg.png',
   path = '',
   productSchema = null,
+  breadcrumbSchema = null,
+  faqSchema = null,
 }) {
   useEffect(() => {
-    // 1. Resolve host domain dynamically
     const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://diyam.in';
     const cleanOrigin = currentOrigin.endsWith('/') ? currentOrigin.slice(0, -1) : currentOrigin;
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
     const canonicalUrl = `${cleanOrigin}${cleanPath === '/' ? '' : cleanPath}`;
 
-    // 2. Update Title (brand keywords + page specific)
-    const baseTitle = 'DIYAM – Premium LED Focus Lights & Lighting Solutions';
-    const fullTitle = title ? `${title} | ${baseTitle}` : `${baseTitle} | diyam.in`;
+    const baseTitle = 'DIYAM – Premium LED Focus Lights & Lighting Solutions India';
+    const fullTitle = title ? `${title} | DIYAM` : baseTitle;
     document.title = fullTitle;
 
-    // Helper function to update or create meta tags
-    const updateMetaTag = (name, value, isProperty = false) => {
+    const setMeta = (name, value, isProperty = false) => {
       if (!value) return;
       const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-      let element = document.querySelector(selector);
-      if (element) {
-        element.setAttribute('content', value);
-      } else {
-        element = document.createElement('meta');
-        if (isProperty) {
-          element.setAttribute('property', name);
-        } else {
-          element.setAttribute('name', name);
-        }
-        element.setAttribute('content', value);
-        document.head.appendChild(element);
-      }
+      let el = document.querySelector(selector);
+      if (el) { el.setAttribute('content', value); return; }
+      el = document.createElement('meta');
+      isProperty ? el.setAttribute('property', name) : el.setAttribute('name', name);
+      el.setAttribute('content', value);
+      document.head.appendChild(el);
     };
 
-    // 3. Update Meta Description and Keywords
-    const defaultDesc = 'Shop high-performance waterproof LED Focus Lights, outdoor flood lights, spots, track lights, and premium Philips Certa drivers at Diyam.';
-    updateMetaTag('description', description || defaultDesc);
+    const setLink = (rel, href) => {
+      let el = document.querySelector(`link[rel="${rel}"]`);
+      if (el) { el.setAttribute('href', href); return; }
+      el = document.createElement('link');
+      el.setAttribute('rel', rel);
+      el.setAttribute('href', href);
+      document.head.appendChild(el);
+    };
 
-    const defaultKeywords = 'Diyam, focus light, led focus light, diyam.in, diyam.co.in, diyam lights, outdoor focus light, spotlight, led driver, philips driver';
-    updateMetaTag('keywords', keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords);
+    const defaultDesc = 'Shop premium LED Focus Lights, spotlights, downlights, track lights, and Philips Certa drivers at DIYAM. Trusted by 5000+ projects across India. Pan-India delivery, 2-year warranty.';
+    const defaultKeywords = 'DIYAM, diyam.in, diyam.co.in, LED focus light, spotlight India, LED downlight, Philips Certa driver, LED track light, buy LED lights India';
 
-    // 4. Update Open Graph (Social Sharing) Tags
-    updateMetaTag('og:title', title ? `${title} | DIYAM` : 'DIYAM – Illuminate Every Moment', true);
-    updateMetaTag('og:description', description || defaultDesc, true);
-    updateMetaTag('og:url', canonicalUrl, true);
-    updateMetaTag('og:image', image.startsWith('http') ? image : `${cleanOrigin}${image}`, true);
+    setMeta('description', description || defaultDesc);
+    setMeta('keywords', keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords);
+    setMeta('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
-    // 5. Update Twitter Card Tags
-    updateMetaTag('twitter:title', title ? `${title} | DIYAM` : 'DIYAM – Premium LED Lighting', false);
-    updateMetaTag('twitter:description', description || defaultDesc, false);
-    updateMetaTag('twitter:image', image.startsWith('http') ? image : `${cleanOrigin}${image}`, false);
+    // Open Graph
+    setMeta('og:type', 'website', true);
+    setMeta('og:site_name', 'DIYAM Premium Lighting', true);
+    setMeta('og:locale', 'en_IN', true);
+    setMeta('og:title', fullTitle, true);
+    setMeta('og:description', description || defaultDesc, true);
+    setMeta('og:url', canonicalUrl, true);
+    const absImage = image.startsWith('http') ? image : `${cleanOrigin}${image}`;
+    setMeta('og:image', absImage, true);
+    setMeta('og:image:width', '1200', true);
+    setMeta('og:image:height', '630', true);
+    setMeta('og:image:alt', title || 'DIYAM Premium LED Lighting India', true);
 
-    // 6. Update Canonical Link Tag dynamically
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl);
-    } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      canonicalLink.setAttribute('href', canonicalUrl);
-      document.head.appendChild(canonicalLink);
-    }
+    // Twitter Card
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:site', '@diyamlighting');
+    setMeta('twitter:title', fullTitle);
+    setMeta('twitter:description', description || defaultDesc);
+    setMeta('twitter:image', absImage);
 
-    // 7. Inject Product Schema JSON-LD if viewing a specific product
-    let schemaScript = document.getElementById('seo-product-schema');
+    // Canonical
+    setLink('canonical', canonicalUrl);
+
+    // ── Inject / update JSON-LD schemas ──────────────────────────
+
+    const setSchema = (id, data) => {
+      let el = document.getElementById(id);
+      if (!data) { if (el) el.remove(); return; }
+      if (!el) {
+        el = document.createElement('script');
+        el.setAttribute('type', 'application/ld+json');
+        el.setAttribute('id', id);
+        document.head.appendChild(el);
+      }
+      el.textContent = JSON.stringify(data);
+    };
+
+    // Product schema
     if (productSchema) {
-      const formattedSchema = {
+      const rawPrice = productSchema.price === 'Contact Me'
+        ? null
+        : parseFloat(String(productSchema.price).replace(/[^\d.]/g, '')) || null;
+
+      const schema = {
         '@context': 'https://schema.org',
         '@type': 'Product',
-        'name': productSchema.name,
-        'image': productSchema.image.startsWith('http') ? productSchema.image : `${cleanOrigin}${productSchema.image}`,
-        'description': productSchema.description,
-        'category': productSchema.category,
-        'sku': `DIYAM-PROD-${productSchema.id}`,
-        'mpn': productSchema.model || `DIYAM-${productSchema.id}`,
-        'brand': {
-          '@type': 'Brand',
-          'name': productSchema.brand || 'DIYAM'
-        },
-        'offers': {
+        name: productSchema.name,
+        image: productSchema.image?.startsWith('http') ? productSchema.image : `${cleanOrigin}${productSchema.image}`,
+        description: productSchema.description,
+        category: productSchema.category,
+        sku: `DIYAM-${productSchema.id}`,
+        mpn: productSchema.model || `DIYAM-${productSchema.id}`,
+        brand: { '@type': 'Brand', name: productSchema.brand || 'DIYAM' },
+        offers: {
           '@type': 'Offer',
-          'url': canonicalUrl,
-          'priceCurrency': 'INR',
-          'price': productSchema.price === 'Contact Me' || !parseFloat(productSchema.price.replace(/[^\d.]/g, ''))
-            ? '0'
-            : parseFloat(productSchema.price.replace(/[^\d.]/g, '')).toString(),
-          'priceValidUntil': '2027-12-31',
-          'availability': 'https://schema.org/InStock',
-          'itemCondition': 'https://schema.org/NewCondition',
-          'seller': {
-            '@type': 'Organization',
-            'name': 'DIYAM Lighting'
-          }
+          url: canonicalUrl,
+          priceCurrency: 'INR',
+          ...(rawPrice ? { price: rawPrice.toString() } : {}),
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          itemCondition: 'https://schema.org/NewCondition',
+          seller: { '@type': 'Organization', name: 'DIYAM Lighting & Electronics' },
         },
-        // Include custom specs inside product properties schema
-        'additionalProperty': Object.keys(productSchema)
-          .filter(key => ['wattage', 'material', 'colorTemp', 'moq', 'usage', 'warranty'].includes(key) && productSchema[key])
-          .map(key => ({
+        additionalProperty: Object.keys(productSchema)
+          .filter((k) => ['wattage', 'material', 'colorTemp', 'moq', 'usage', 'warranty', 'ipRating', 'cri', 'lumens'].includes(k) && productSchema[k])
+          .map((k) => ({
             '@type': 'PropertyValue',
-            'name': key === 'colorTemp' ? 'Color Temperature' : key.toUpperCase(),
-            'value': productSchema[key]
-          }))
+            name: k === 'colorTemp' ? 'Color Temperature' : k === 'ipRating' ? 'IP Rating' : k === 'cri' ? 'CRI' : k.toUpperCase(),
+            value: productSchema[k],
+          })),
       };
-
-      if (!schemaScript) {
-        schemaScript = document.createElement('script');
-        schemaScript.setAttribute('type', 'application/ld+json');
-        schemaScript.setAttribute('id', 'seo-product-schema');
-        document.head.appendChild(schemaScript);
-      }
-      schemaScript.textContent = JSON.stringify(formattedSchema, null, 2);
-    } else if (schemaScript) {
-      // Clean up product schema when navigating away
-      schemaScript.remove();
+      setSchema('seo-product-schema', schema);
+    } else {
+      setSchema('seo-product-schema', null);
     }
 
-    // Clean up dynamic product schema on unmount
-    return () => {
-      const scriptToRemove = document.getElementById('seo-product-schema');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-    };
-  }, [title, description, keywords, image, path, productSchema]);
+    // Breadcrumb schema
+    setSchema('seo-breadcrumb-schema', breadcrumbSchema || null);
 
-  return null; // This component runs entirely as a side-effect, returning no UI
+    // FAQ schema
+    setSchema('seo-faq-schema', faqSchema || null);
+
+    return () => {
+      setSchema('seo-product-schema', null);
+      setSchema('seo-breadcrumb-schema', null);
+      setSchema('seo-faq-schema', null);
+    };
+  }, [title, description, keywords, image, path, productSchema, breadcrumbSchema, faqSchema]);
+
+  return null;
 }

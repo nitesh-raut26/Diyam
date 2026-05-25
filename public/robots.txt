@@ -1,14 +1,82 @@
-# robots.txt for Diyam Premium Lighting (diyam.in and diyam.co.in)
-# Designed for maximum indexing of LED lights, focus lights, and electronic controls.
+# robots.txt for DIYAM Premium Lighting & Electronics
+# diyam.in | diyam.co.in
+# India's Premier LED Lighting Brand
 
+# === Standard Search Engine Crawlers ===
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+# === AI Search Engine Crawlers — Explicitly Allowed for AI Search Visibility ===
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# OpenAI — SearchGPT & Browsing
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google Gemini & AI Overview
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Apple Applebot (Siri)
+User-agent: Applebot
+Allow: /
+
+# Microsoft Copilot
+User-agent: msnbot
+Allow: /
+
+# Amazon Alexa
+User-agent: ia_archiver
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# === All Other Crawlers ===
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /admin/
 Disallow: /api/
+Disallow: /api/*
+Crawl-delay: 5
 
-# Host references for search engines
-Host: diyam.in
-
-# Sitemaps for both domain variants to ensure crawler indexing on both addresses
+# === Sitemaps ===
 Sitemap: https://diyam.in/sitemap.xml
 Sitemap: https://diyam.co.in/sitemap.xml

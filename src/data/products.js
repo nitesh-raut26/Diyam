@@ -10,6 +10,7 @@ const baseProducts = [
   // ── New Premium Lighting Collection (Upper Row) ───────────────
   {
     id: 101,
+    slug: 'fb-delta-spot-light-15w-led-ceiling-spotlight',
     name: 'FB Delta Spot Light',
     category: 'Led Spot Lights',
     price: 'Contact Me',
@@ -27,6 +28,7 @@ const baseProducts = [
   },
   {
     id: 102,
+    slug: 'fb-track-light-30w-cob-led-commercial',
     name: 'FB Track Light',
     category: 'LED Track Light',
     price: 'Contact Me',
@@ -44,6 +46,7 @@ const baseProducts = [
   },
   {
     id: 103,
+    slug: 'diyam-premium-focus-light-50w-outdoor-led',
     name: 'Diyam Premium Focus Light',
     category: 'LED Focus Light',
     price: 'Contact Me',
@@ -61,6 +64,7 @@ const baseProducts = [
   },
   {
     id: 104,
+    slug: 'glaza-premium-spotlight-12w-wall-accent-led',
     name: 'Glaza Premium Spotlight',
     category: 'Led Spot Lights',
     price: 'Contact Me',
@@ -78,6 +82,7 @@ const baseProducts = [
   },
   {
     id: 105,
+    slug: 'glaza-12w-ellipse-led-downlight-ceiling',
     name: 'Glaza 12W Ellipse Downlight',
     category: 'LED Downlight',
     price: 'Contact Me',
@@ -89,12 +94,13 @@ const baseProducts = [
     material: 'Aluminium',
     moq: '10 Pieces',
     description: 'Premium recessed elliptical ceiling downlight designed for uniform, flicker-free light distribution. Clean aesthetic contour blends flawlessly with modern residential or corporate false ceilings.',
-    image: '/products/Glaza12wellipse.jpeg',
+    image: '/products/Glaza12wellipse.png',
     tags: ['12W', 'Ellipse', 'Downlight'],
     inquiry: 'I am interested in the Glaza 12W Ellipse Downlight. Please share specifications and pricing.',
   },
   {
     id: 106,
+    slug: 'gloria-track-light-20w-led-showroom',
     name: 'Gloria Track Light',
     category: 'LED Track Light',
     price: 'Contact Me',
@@ -106,12 +112,13 @@ const baseProducts = [
     material: 'Aluminium',
     moq: '5 Pieces',
     description: 'Elegant and lightweight 20W LED track light. Employs advanced optical lens for precise beam control and a beautiful gradient falloff. Excellent for upscale showrooms, hotel lobbies, and styling studios.',
-    image: '/products/GloriaTracklight.jpeg',
+    image: '/products/GloriaTracklight.png',
     tags: ['20W', 'Precise Beam', 'Track Light'],
     inquiry: 'I am interested in the Gloria Track Light. Please share specifications and pricing.',
   },
   {
     id: 107,
+    slug: 'pesto-laser-spotlight-10w-narrow-beam-led',
     name: 'Pesto Laser Spotlight',
     category: 'Led Spot Lights',
     price: 'Contact Me',
@@ -129,6 +136,7 @@ const baseProducts = [
   },
   {
     id: 108,
+    slug: 'diyam-classic-track-light-24w-cri90-commercial',
     name: 'Diyam Classic Track Light',
     category: 'LED Track Light',
     price: 'Contact Me',
@@ -140,12 +148,13 @@ const baseProducts = [
     material: 'Aluminium',
     moq: '5 Pieces',
     description: 'Classic durable track spotlight built for heavy-duty commercial service. Excellent color rendering index (CRI > 90) to display true colors in commercial boutiques and gallery exhibitions.',
-    image: '/products/Tracklight.jpeg',
+    image: '/products/Tracklight.png',
     tags: ['24W', 'CRI > 90', 'Track Light'],
     inquiry: 'I am interested in the Diyam Classic Track Light. Please share specifications and pricing.',
   },
   {
     id: 109,
+    slug: 'tricolor-ring-downlight-16w-smart-3-in-1-tunable',
     name: 'Tricolor Ring Downlight',
     category: 'LED Downlight',
     price: 'Contact Me',
@@ -165,6 +174,7 @@ const baseProducts = [
   // ── Led Light ──────────────────────────────────────────────────
   {
     id: 1,
+    slug: 'indoor-led-light-16w-warm-white-surface-panel',
     name: 'Indoor Led Light',
     category: 'Led Light',
     price: '₹3,000/Piece',
@@ -182,6 +192,7 @@ const baseProducts = [
   },
   {
     id: 2,
+    slug: 'philips-constant-driver-24v-60w-led',
     name: 'Philips Constant Driver 24v/60w',
     category: 'Led Light',
     price: '₹625/Piece',
@@ -197,6 +208,7 @@ const baseProducts = [
   },
   {
     id: 3,
+    slug: 'cob-led-downlight-15w-philips-driver-warm-white',
     name: 'Cob Led Down Light',
     category: 'Led Light',
     price: '₹275/Piece',
@@ -214,6 +226,7 @@ const baseProducts = [
   },
   {
     id: 4,
+    slug: 'certa-drive-philips-40w-surge-protection-led-driver',
     name: 'Certa Drive Philips (40W)',
     category: 'Led Light',
     price: '₹290/Piece',
@@ -229,6 +242,7 @@ const baseProducts = [
   },
   {
     id: 5,
+    slug: 'certa-drive-philips-10w-250ma-led-driver',
     name: 'Certa Drive Philips (10W)',
     category: 'Led Light',
     price: '₹92/Piece',
@@ -244,6 +258,7 @@ const baseProducts = [
   },
   {
     id: 6,
+    slug: 'led-strip-driver-50w-12v-5a-made-in-india',
     name: 'Led Strip Driver',
     category: 'Led Light',
     price: '₹415/Piece',
@@ -261,6 +276,7 @@ const baseProducts = [
   },
   {
     id: 7,
+    slug: 'track-light-4000k-black-9w-led-metal',
     name: 'Track Light 4000K/Black',
     category: 'Led Light',
     price: '₹500/Piece',
@@ -278,6 +294,7 @@ const baseProducts = [
   },
   {
     id: 8,
+    slug: 'sunflower-downlight-16w-round-decorative-led',
     name: 'Sunflower Down Light',
     category: 'Led Light',
     price: '₹500/Piece',
@@ -297,6 +314,7 @@ const baseProducts = [
   // ── Philips Certa Driver ──────────────────────────────────────
   {
     id: 9,
+    slug: 'philips-triac-dimmable-led-driver-12w-indoor',
     name: 'Philips TRIAC Dimmable LED Driver',
     category: 'Philips Certa Driver',
     price: '₹350/Piece',
@@ -313,6 +331,7 @@ const baseProducts = [
   },
   {
     id: 10,
+    slug: 'philips-certa-drive-300ma-10w-led-driver-240v',
     name: 'Philips Certa Drive 300mA (10W)',
     category: 'Philips Certa Driver',
     price: '₹94/Piece',
@@ -329,6 +348,7 @@ const baseProducts = [
   },
   {
     id: 11,
+    slug: 'philips-certa-drive-150ma-9w-led-driver-240v',
     name: 'Philips Certa Drive 150mA (9W)',
     category: 'Philips Certa Driver',
     price: '₹63/Piece',
@@ -345,6 +365,7 @@ const baseProducts = [
   },
   {
     id: 12,
+    slug: 'philips-certa-drive-300ma-12w-led-driver-240v',
     name: 'Philips Certa Drive 300mA (12W)',
     category: 'Philips Certa Driver',
     price: '₹96/Piece',
@@ -361,6 +382,7 @@ const baseProducts = [
   },
   {
     id: 13,
+    slug: 'philips-led-driver-20w-2amp-delhi-ncr',
     name: 'Philips Led Driver (20W)',
     category: 'Philips Certa Driver',
     price: '₹215/Piece',
@@ -376,6 +398,7 @@ const baseProducts = [
   },
   {
     id: 14,
+    slug: 'philips-certa-drive-400ma-17w-led-driver-240v',
     name: 'Philips Certa Drive 400mA (17W)',
     category: 'Philips Certa Driver',
     price: '₹150/Piece',
@@ -393,6 +416,7 @@ const baseProducts = [
   },
   {
     id: 15,
+    slug: 'philips-xitanium-led-driver-75w-surge-protection',
     name: 'Philips Xitanium Led Driver (75W)',
     category: 'Philips Certa Driver',
     price: '₹775/Piece',
@@ -411,6 +435,7 @@ const baseProducts = [
   // ── LED Downlight ─────────────────────────────────────────────
   {
     id: 16,
+    slug: 'round-led-downlight-8w-cool-daylight-6500k-indoor',
     name: 'Round LED Downlight (8W Cool)',
     category: 'LED Downlight',
     price: '₹725/Piece',
@@ -430,6 +455,7 @@ const baseProducts = [
   },
   {
     id: 17,
+    slug: 'led-downlight-15w-warm-white-3000k-surface-mount',
     name: 'Led Downlight (15W)',
     category: 'LED Downlight',
     price: '₹450/Piece',
@@ -450,6 +476,7 @@ const baseProducts = [
   },
   {
     id: 18,
+    slug: 'round-led-downlight-10w-surface-mount-premium',
     name: 'Round Led Downlight (10W)',
     category: 'LED Downlight',
     price: '₹1,150/Piece',
@@ -470,6 +497,7 @@ const baseProducts = [
   },
   {
     id: 19,
+    slug: 'round-led-downlight-8w-warm-white-3000k-outdoor',
     name: 'Round Led Downlight (8W Warm)',
     category: 'LED Downlight',
     price: '₹550/Piece',
@@ -491,6 +519,7 @@ const baseProducts = [
   // ── LED COB Light ─────────────────────────────────────────────
   {
     id: 20,
+    slug: 'led-cob-light-12w-cool-white-6500k-ip66-black',
     name: 'Led Cob Light 12W (Cool White)',
     category: 'LED COB Light',
     price: '₹450/Piece',
@@ -510,6 +539,7 @@ const baseProducts = [
   },
   {
     id: 21,
+    slug: 'led-cob-light-12w-warm-white-3000k-modern-home',
     name: 'Led Cob Light 12W (Warm White)',
     category: 'LED COB Light',
     price: '₹700/Piece',
@@ -530,6 +560,7 @@ const baseProducts = [
   },
   {
     id: 22,
+    slug: 'cob-led-downlight-6w-cool-white-4000k-philips-driver',
     name: 'Cob Led Down Light (6W)',
     category: 'LED COB Light',
     price: '₹500/Piece',
@@ -553,6 +584,7 @@ const baseProducts = [
   // ── Led Driver ────────────────────────────────────────────────
   {
     id: 23,
+    slug: 'philips-drive-led-driver-50w-700ma-street-light',
     name: 'Philips Driver LED Driver (50W)',
     category: 'Led Driver',
     price: '₹290/Piece',
@@ -571,6 +603,7 @@ const baseProducts = [
   },
   {
     id: 24,
+    slug: 'ac-dc-led-driver-24w-12v-street-light',
     name: 'AC-DC LED Drivers (24W)',
     category: 'Led Driver',
     price: '₹225/Piece',
@@ -588,6 +621,7 @@ const baseProducts = [
   },
   {
     id: 25,
+    slug: 'street-light-driver-60w-5amp-made-in-india',
     name: 'Street Light Driver (60W)',
     category: 'Led Driver',
     price: '₹415/Piece',
@@ -606,6 +640,7 @@ const baseProducts = [
   // ── Philips Led Driver ────────────────────────────────────────
   {
     id: 26,
+    slug: 'certa-drive-philips-20w-700ma-led-driver',
     name: 'Certa Drive Philips (20W/700mA)',
     category: 'Philips Led Driver',
     price: '₹225/Piece',
@@ -622,6 +657,7 @@ const baseProducts = [
   },
   {
     id: 27,
+    slug: 'xitanium-philips-led-driver-150w-1050ma-high-power',
     name: 'Xitanium Philips Led Driver (150W)',
     category: 'Philips Led Driver',
     price: '₹1,200/Piece',
@@ -641,6 +677,7 @@ const baseProducts = [
   // ── LED Panel Light ───────────────────────────────────────────
   {
     id: 28,
+    slug: 'led-square-panel-light-6w-cool-daylight-surface-mount',
     name: 'Led Square Panel Light (6W)',
     category: 'LED Panel Light',
     price: '₹180/Piece',
@@ -660,6 +697,7 @@ const baseProducts = [
   },
   {
     id: 29,
+    slug: 'panel-surface-light-20w-2000lm-cri85-ip33',
     name: 'Panel Surface Light (20W)',
     category: 'LED Panel Light',
     price: '₹360/Piece',
@@ -686,6 +724,7 @@ const baseProducts = [
   // ── LED Track Light ───────────────────────────────────────────
   {
     id: 30,
+    slug: 'led-track-light-30w-ip55-bridgelux-cob-commercial',
     name: 'LED Track Light (30W)',
     category: 'LED Track Light',
     price: '₹750/Piece',
@@ -707,6 +746,7 @@ const baseProducts = [
   // ── LED Chip ──────────────────────────────────────────────────
   {
     id: 31,
+    slug: 'bridgelux-cob-chip-24w-130-lumen-3000k-4000k',
     name: 'Bridgelux COB Chip',
     category: 'LED Chip',
     price: '₹40/Piece',
@@ -728,6 +768,7 @@ const baseProducts = [
   // ── LED Linear Light ──────────────────────────────────────────
   {
     id: 32,
+    slug: 'led-linear-lamp-10w-12v-b15-cove-lighting',
     name: 'LED Linear Lamp (10W)',
     category: 'LED Linear Light',
     price: '₹550/Piece',
@@ -751,6 +792,7 @@ const baseProducts = [
   // ── LED Recessed Downlight ────────────────────────────────────
   {
     id: 33,
+    slug: 'led-recessed-downlight-10w-4000k-2year-warranty',
     name: 'LED Recessed Downlight (10W)',
     category: 'LED Recessed Downlight',
     price: '₹650/Piece',
@@ -774,6 +816,7 @@ const baseProducts = [
   // ── LED Focus Light ───────────────────────────────────────────
   {
     id: 34,
+    slug: 'led-focus-light-20w-outdoor-ip40-aluminium',
     name: 'Led Focus Light (20W)',
     category: 'LED Focus Light',
     price: '₹750/Piece',
@@ -795,6 +838,7 @@ const baseProducts = [
   // ── LED Flood Light ───────────────────────────────────────────
   {
     id: 35,
+    slug: 'led-flood-light-50w-ip66-outdoor-weatherproof',
     name: 'Led Flood Light (50W)',
     category: 'LED Flood Light',
     price: '₹750/Piece',
@@ -816,6 +860,7 @@ const baseProducts = [
   // ── Spotlight Bulb ────────────────────────────────────────────
   {
     id: 36,
+    slug: 'glanza-sport-light-warm-white-aluminium-premium',
     name: 'Glanza Sport Light',
     category: 'Spotlight Bulb',
     price: '₹1,200/Piece',
@@ -835,6 +880,7 @@ const baseProducts = [
   // ── Led Spot Lights ───────────────────────────────────────────
   {
     id: 37,
+    slug: 'warm-white-led-spotlight-indoor-made-in-india',
     name: 'Warm White Spotlight',
     category: 'Led Spot Lights',
     price: '₹425/Piece',
@@ -854,6 +900,7 @@ const baseProducts = [
   // ── Led Edge Lit Panel Light ──────────────────────────────────
   {
     id: 38,
+    slug: 'wooden-cylinder-lights-15w-4000k-decorative-pendant',
     name: 'Wooden Cylinder Lights (15W)',
     category: 'Led Edge Lit Panel Light',
     price: '₹600/Piece',
@@ -872,6 +919,9 @@ const baseProducts = [
 ];
 
 export { baseProducts };
+
+export const productBySlug = (slug) =>
+  baseProducts.find((p) => p.slug === slug);
 
 const getCustomProducts = () => {
   try {

@@ -29,7 +29,7 @@ function AnimatedRoutes() {
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/product/:idOrSlug" element={<ProductDetailPage />} />
           <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </motion.div>

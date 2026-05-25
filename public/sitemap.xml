@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Navigation Pages -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CORE PAGES                                                       -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
   <url>
     <loc>https://diyam.in/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://diyam.in/category_bg.png</image:loc>
+      <image:title>DIYAM Premium LED Lighting – India's Best LED Lights Brand</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://diyam.in/products</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://diyam.in/categories</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://diyam.in/about</loc>
@@ -38,109 +46,498 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Core LED & Focus Light Products (High Priority) -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- PREMIUM SPOTLIGHT & TRACK COLLECTION (High-Priority Products)   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
   <url>
-    <loc>https://diyam.in/product/103</loc>
+    <loc>https://diyam.in/product/diyam-premium-focus-light-50w-outdoor-led</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/FocusLight.jpeg</image:loc>
+      <image:title>DIYAM Premium Focus Light 50W Outdoor LED – Facade &amp; Landscape Lighting India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/34</loc>
+    <loc>https://diyam.in/product/fb-delta-spot-light-15w-led-ceiling-spotlight</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/FBDeltaSpotLight.jpeg</image:loc>
+      <image:title>FB Delta Spot Light 15W Anti-Glare LED Ceiling Spotlight India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/101</loc>
+    <loc>https://diyam.in/product/fb-track-light-30w-cob-led-commercial</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/FbTrack.jpeg</image:loc>
+      <image:title>FB Track Light 30W COB LED Commercial Track Spotlight India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/102</loc>
+    <loc>https://diyam.in/product/pesto-laser-spotlight-10w-narrow-beam-led</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/PestoLaser.jpeg</image:loc>
+      <image:title>Pesto Laser Spotlight 10W Ultra-Narrow Beam LED Spotlight India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/107</loc>
+    <loc>https://diyam.in/product/glaza-premium-spotlight-12w-wall-accent-led</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/Glaza.jpeg</image:loc>
+      <image:title>Glaza Premium 12W Architectural LED Spotlight – Wall Accent Lighting</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/30</loc>
+    <loc>https://diyam.in/product/glaza-12w-ellipse-led-downlight-ceiling</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.87</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/Glaza12wellipse.jpeg</image:loc>
+      <image:title>Glaza 12W Ellipse LED Downlight – Modern False Ceiling Light India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/3</loc>
+    <loc>https://diyam.in/product/gloria-track-light-20w-led-showroom</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.87</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/GloriaTracklight.jpeg</image:loc>
+      <image:title>Gloria Track Light 20W LED – Premium Showroom &amp; Hotel Lobby Lighting</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/17</loc>
+    <loc>https://diyam.in/product/diyam-classic-track-light-24w-cri90-commercial</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.87</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/Tracklight.jpeg</image:loc>
+      <image:title>DIYAM Classic Track Light 24W CRI90 Commercial LED Spotlight India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/23</loc>
+    <loc>https://diyam.in/product/tricolor-ring-downlight-16w-smart-3-in-1-tunable</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://diyam.in/product/27</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.86</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/tricolorring.jpeg</image:loc>
+      <image:title>Tricolor Ring Downlight 16W Smart 3-in-1 Tunable LED India</image:title>
+    </image:image>
   </url>
 
-  <!-- Other prominent product paths for search indexing -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LED FOCUS & FLOOD LIGHTS                                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
   <url>
-    <loc>https://diyam.in/product/1</loc>
+    <loc>https://diyam.in/product/led-focus-light-20w-outdoor-ip40-aluminium</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-focus-light-20w.jpg</image:loc>
+      <image:title>LED Focus Light 20W Outdoor IP40 Aluminium – Buy LED Focus Light India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/2</loc>
+    <loc>https://diyam.in/product/led-flood-light-50w-ip66-outdoor-weatherproof</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-flood-light-50w.jpg</image:loc>
+      <image:title>LED Flood Light 50W IP66 Outdoor Weatherproof – Best Price India</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LED DOWNLIGHTS & COB LIGHTS                                     -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://diyam.in/product/cob-led-downlight-15w-philips-driver-warm-white</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/cob-led-downlight-15w.jpg</image:loc>
+      <image:title>COB LED Downlight 15W Philips Driver Warm White – Buy Online India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/4</loc>
+    <loc>https://diyam.in/product/led-downlight-15w-warm-white-3000k-surface-mount</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-downlight-15w.jpg</image:loc>
+      <image:title>LED Downlight 15W Warm White 3000K Surface Mount – India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/6</loc>
+    <loc>https://diyam.in/product/round-led-downlight-8w-cool-daylight-6500k-indoor</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.83</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/round-led-downlight-8w-cool.jpg</image:loc>
+      <image:title>Round LED Downlight 8W Cool Daylight 6500K Indoor – DIYAM India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/15</loc>
+    <loc>https://diyam.in/product/round-led-downlight-8w-warm-white-3000k-outdoor</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.83</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/round-led-downlight-8w-warm.jpg</image:loc>
+      <image:title>Round LED Downlight 8W Warm White 3000K – Indoor &amp; Outdoor India</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://diyam.in/product/20</loc>
+    <loc>https://diyam.in/product/round-led-downlight-10w-surface-mount-premium</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.83</priority>
   </url>
   <url>
-    <loc>https://diyam.in/product/21</loc>
+    <loc>https://diyam.in/product/led-recessed-downlight-10w-4000k-2year-warranty</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-recessed-downlight-10w.jpg</image:loc>
+      <image:title>LED Recessed Downlight 10W 4000K 2-Year Warranty – False Ceiling India</image:title>
+    </image:image>
   </url>
+  <url>
+    <loc>https://diyam.in/product/led-cob-light-12w-cool-white-6500k-ip66-black</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-cob-light-12w-cool.jpg</image:loc>
+      <image:title>LED COB Light 12W Cool White 6500K IP66 Black – India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/led-cob-light-12w-warm-white-3000k-modern-home</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-cob-light-12w-warm.jpg</image:loc>
+      <image:title>LED COB Light 12W Warm White 3000K Modern Home – Buy Online India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/cob-led-downlight-6w-cool-white-4000k-philips-driver</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LED TRACK LIGHTS                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://diyam.in/product/led-track-light-30w-ip55-bridgelux-cob-commercial</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-track-light-30w.jpg</image:loc>
+      <image:title>LED Track Light 30W IP55 Bridgelux COB – Commercial Retail Lighting India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/track-light-4000k-black-9w-led-metal</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/track-light-4000k-black-9w.jpg</image:loc>
+      <image:title>Track Light 4000K Black 9W LED Metal – Gallery &amp; Retail Lighting India</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LED PANEL LIGHTS                                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://diyam.in/product/indoor-led-light-16w-warm-white-surface-panel</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/indoor-led-light-16w.jpg</image:loc>
+      <image:title>Indoor LED Panel Light 16W Warm White 4000K Chrome – Surface Mount India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/led-square-panel-light-6w-cool-daylight-surface-mount</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-square-panel-light-6w.jpg</image:loc>
+      <image:title>LED Square Panel Light 6W Cool Daylight Surface Mount – Buy Online India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/panel-surface-light-20w-2000lm-cri85-ip33</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.83</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/panel-surface-light-20w.jpg</image:loc>
+      <image:title>LED Panel Surface Light 20W 2000 Lumens CRI85 IP33 – India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/sunflower-downlight-16w-round-decorative-led</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/sunflower-downlight-16w.jpg</image:loc>
+      <image:title>Sunflower Decorative LED Downlight 16W Round – Home Ceiling Lights India</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- SPOTLIGHTS & SPECIALTY                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://diyam.in/product/glanza-sport-light-warm-white-aluminium-premium</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/glanza-sport-light.jpg</image:loc>
+      <image:title>Glanza Sport Light Premium Aluminium Warm White LED Spotlight – Home India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/warm-white-led-spotlight-indoor-made-in-india</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/warm-white-spotlight.jpg</image:loc>
+      <image:title>Warm White LED Spotlight Indoor Round – Made in India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/wooden-cylinder-lights-15w-4000k-decorative-pendant</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/wooden-cylinder-lights-15w.jpg</image:loc>
+      <image:title>Wooden Cylinder LED Lights 15W 4000K Decorative Pendant – Premium Interior India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/led-linear-lamp-10w-12v-b15-cove-lighting</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-linear-lamp-10w.jpg</image:loc>
+      <image:title>LED Linear Lamp 10W 12V B15 – Cove Lighting India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/bridgelux-cob-chip-24w-130-lumen-3000k-4000k</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/bridgelux-cob-chip-24w.jpg</image:loc>
+      <image:title>Bridgelux COB LED Chip 24W 130 Lumen 3000K 4000K – India</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- PHILIPS CERTA DRIVERS — High-Search-Volume Products             -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://diyam.in/product/philips-xitanium-led-driver-75w-surge-protection</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-xitanium-led-driver-75w.jpg</image:loc>
+      <image:title>Philips Xitanium LED Driver 75W Surge Protection – Buy India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/xitanium-philips-led-driver-150w-1050ma-high-power</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/xitanium-philips-led-driver-150w.jpg</image:loc>
+      <image:title>Philips Xitanium LED Driver 150W 1050mA High Power – Street Light India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-triac-dimmable-led-driver-12w-indoor</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-triac-dimmable-led-driver-12w.jpg</image:loc>
+      <image:title>Philips TRIAC Dimmable LED Driver 12W – Buy Online India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-constant-driver-24v-60w-led</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-constant-driver-24v-60w.jpg</image:loc>
+      <image:title>Philips Constant LED Driver 24V 60W – Buy Online India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-certa-drive-300ma-10w-led-driver-240v</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-certa-drive-300ma-10w.jpg</image:loc>
+      <image:title>Philips Certa Drive 300mA 10W LED Driver 240V – India Price</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-certa-drive-300ma-12w-led-driver-240v</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-certa-drive-300ma-12w.jpg</image:loc>
+      <image:title>Philips Certa Drive 300mA 12W LED Driver 240V – India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-certa-drive-400ma-17w-led-driver-240v</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-certa-drive-400ma-17w.jpg</image:loc>
+      <image:title>Philips Certa Drive 400mA 17W LED Driver 240V – India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-certa-drive-150ma-9w-led-driver-240v</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-certa-drive-150ma-9w.jpg</image:loc>
+      <image:title>Philips Certa Drive 150mA 9W LED Driver 240V – India Price</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/certa-drive-philips-40w-surge-protection-led-driver</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/certa-drive-philips-40w.jpg</image:loc>
+      <image:title>Philips Certa Drive 40W 1A Surge Protection LED Driver – India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/certa-drive-philips-10w-250ma-led-driver</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/certa-drive-philips-10w.jpg</image:loc>
+      <image:title>Philips Certa Drive 10W 250mA LED Driver – Compact Downlight Driver India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-led-driver-20w-2amp-delhi-ncr</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/philips-led-driver-20w.jpg</image:loc>
+      <image:title>Philips LED Driver 20W 2A – Delhi NCR Supply India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/certa-drive-philips-20w-700ma-led-driver</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/certa-drive-philips-20w-700ma.jpg</image:loc>
+      <image:title>Philips Certa Drive 20W 700mA LED Driver – India</image:title>
+    </image:image>
+  </url>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LED STRIP & STREET LIGHT DRIVERS                                -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://diyam.in/product/led-strip-driver-50w-12v-5a-made-in-india</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/led-strip-driver-50w.jpg</image:loc>
+      <image:title>LED Strip Driver 50W 12V 5A Made in India – 1 Year Warranty</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/philips-drive-led-driver-50w-700ma-street-light</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/waterproof-led-driver-50w.jpg</image:loc>
+      <image:title>Philips Drive LED Driver 50W 700mA – Street Light Driver India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/ac-dc-led-driver-24w-12v-street-light</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/ac-dc-led-drivers-24w.jpg</image:loc>
+      <image:title>AC-DC LED Driver 24W 12V – LED Street Light Driver India</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://diyam.in/product/street-light-driver-60w-5amp-made-in-india</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://diyam.in/products/street-light-driver-60w.jpg</image:loc>
+      <image:title>LED Street Light Driver 60W 5A Made in India – Constant Current Driver</image:title>
+    </image:image>
+  </url>
+
 </urlset>
