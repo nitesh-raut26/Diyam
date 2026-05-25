@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { motion } from 'framer-motion'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
@@ -69,6 +70,12 @@ const quickOptions = [
 export default function ContactPage() {
   return (
     <>
+      <SEO 
+        title="Contact Us - Premium Lighting Inquiries"
+        description="Get in touch with DIYAM (diyam.in / diyam.co.in) Premium Lighting. Inquire about our heavy-duty waterproof LED Focus Lights, spotlights, and electronic drivers. WhatsApp, call, or visit our Haryana showroom."
+        keywords="diyam contact, diyam haryana address, order focus lights ncr, led supplier contact, whatsapp diyam lighting"
+        path="/contact"
+      />
       {/* Page Hero */}
       <section className="relative pt-32 pb-16 px-6 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-center opacity-30 pointer-events-none" />

@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import ProductCard from '../components/ProductCard'
@@ -44,6 +45,12 @@ export default function ProductsPage() {
 
   return (
     <>
+      <SEO 
+        title="Premium LED & Focus Lights Catalog"
+        description="Browse the complete catalog of DIYAM (diyam.in / diyam.co.in) Premium Lighting. Discover 38+ premium products across 16 categories including waterproof LED Focus Lights, spotlights, downlights, linear systems, and high-volt drivers."
+        keywords="diyam products, focus light catalog, led track lights price, buy cob downlight, waterproof led drivers"
+        path="/products"
+      />
       {/* Page Hero */}
       <section className="relative pt-24 pb-2 px-6 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-center opacity-30 pointer-events-none" />

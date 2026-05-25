@@ -5,6 +5,7 @@ import { products } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import Footer from '../components/Footer'
 import ScrollReveal from '../components/ScrollReveal'
+import SEO from '../components/SEO'
 
 const specLabels = {
   brand: 'Brand',
@@ -108,6 +109,14 @@ export default function ProductDetailPage() {
 
   return (
     <>
+      <SEO 
+        title={product.name}
+        description={`${product.name} (${product.wattage || ''} ${product.category}) - ${product.description}`}
+        keywords={`${product.name}, ${product.category}, buy ${product.name}, ${product.tags.join(', ')}`}
+        image={product.image}
+        path={`/product/${product.id}`}
+        productSchema={product}
+      />
       <div className="bg-white min-h-screen pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           

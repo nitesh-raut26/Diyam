@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
@@ -92,6 +93,12 @@ export default function CategoriesPage() {
 
   return (
     <>
+      <SEO 
+        title="LED Product Categories"
+        description="Explore the extensive LED and electronic category list of DIYAM (diyam.in / diyam.co.in). Browse through LED Focus Lights, spotlights, track lights, downlights, drivers, linear systems, and strip modules."
+        keywords="diyam categories, led lighting types, commercial led driver categories, find focus light, shop downlight"
+        path="/categories"
+      />
       {/* Page Hero */}
       <section className="relative pt-24 pb-2 px-6 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-center opacity-30 pointer-events-none" />

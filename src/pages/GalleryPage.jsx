@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import Gallery from '../components/Gallery'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
@@ -5,6 +6,12 @@ import { motion } from 'framer-motion'
 export default function GalleryPage() {
   return (
     <>
+      <SEO 
+        title="LED Projects Gallery - Premium Lighting Installations"
+        description="View our curated portfolio of premium architectural and landscape installations at DIYAM (diyam.in / diyam.co.in). See real-world highlights of outdoor Focus Lights, spotlights, and dynamic indoor setups."
+        keywords="diyam gallery, lighting projects portfolio, focus light installation, led spotlight showcase"
+        path="/gallery"
+      />
       {/* Page Hero */}
       <section className="relative pt-32 pb-4 px-6 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-center opacity-30 pointer-events-none" />

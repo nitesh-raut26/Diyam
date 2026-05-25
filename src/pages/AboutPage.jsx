@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import About from '../components/About'
@@ -43,6 +44,12 @@ const milestones = [
 export default function AboutPage() {
   return (
     <>
+      <SEO 
+        title="About Us - Luxury LED Lighting Experts since 2015"
+        description="Learn about DIYAM (diyam.in / diyam.co.in) – India's premium LED lighting manufacturer. Discover our journey, from our founding in Gurugram to serving thousands of premium architectural projects with Focus Lights, spotlights, and smart downlights."
+        keywords="about diyam, led lighting manufacturer, diyam lighting NCR, premium led supplier India, diyam lights story"
+        path="/about"
+      />
       {/* Page Hero */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-center opacity-30 pointer-events-none" />

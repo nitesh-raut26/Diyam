@@ -1,0 +1,14 @@
+# robots.txt for Diyam Premium Lighting (diyam.in and diyam.co.in)
+# Designed for maximum indexing of LED lights, focus lights, and electronic controls.
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Host references for search engines
+Host: diyam.in
+
+# Sitemaps for both domain variants to ensure crawler indexing on both addresses
+Sitemap: https://diyam.in/sitemap.xml
+Sitemap: https://diyam.co.in/sitemap.xml
