@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 
 const specLabels = {
   brand: 'Brand',
-  model: 'Model',
+  model: 'Model Number',
   wattage: 'Wattage',
   current: 'Current',
   outputCurrent: 'Output Current',
@@ -17,6 +17,10 @@ const specLabels = {
   outputVoltage: 'Output Voltage',
   color: 'Light Color',
   colorTemp: 'Color Temperature',
+  connectivity: 'Connectivity',
+  control: 'Control Method',
+  mounting: 'Mounting Type',
+  lightType: 'Light Type',
   material: 'Body Material',
   shape: 'Shape',
   warranty: 'Warranty',
@@ -108,11 +112,13 @@ export default function ProductDetailPage() {
   const { idOrSlug } = useParams()
   const [imgError, setImgError] = useState(false)
   const [openFaq, setOpenFaq] = useState(null)
+  const [selectedImg, setSelectedImg] = useState(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
     setImgError(false)
     setOpenFaq(null)
+    setSelectedImg(null)
   }, [idOrSlug])
 
   const product = useMemo(() => {
@@ -132,6 +138,13 @@ export default function ProductDetailPage() {
       .filter((key) => specLabels[key] && product[key])
       .map((key) => ({ key, label: specLabels[key], value: product[key] }))
   }, [product])
+
+  const imgList = useMemo(() => {
+    if (!product) return []
+    return product.images?.length ? product.images : [product.image]
+  }, [product])
+
+  const displayImg = selectedImg || product?.image
 
   const related = useMemo(() => {
     if (!product) return []
@@ -221,39 +234,66 @@ export default function ProductDetailPage() {
             {/* Left Image column */}
             <div className="lg:col-span-6">
               <div className="sticky top-28">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="relative aspect-square rounded-3xl overflow-hidden shadow-md flex items-center justify-center p-8 group border border-slate-100"
-                  style={{ background: `radial-gradient(circle at center, #FFFFFF 30%, ${cv.light} 100%)` }}
-                >
-                  {product.image && !imgError ? (
-                    <img
-                      src={product.image}
-                      alt={`${product.name} – ${product.wattage || ''} ${product.category} – DIYAM India`}
-                      onError={() => setImgError(true)}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply"
-                      loading="eager"
-                      width="600"
-                      height="600"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center text-slate-300">
-                      <svg viewBox="0 0 64 64" fill="none" width="120" height="120">
-                        <circle cx="32" cy="24" r="14" fill={cv.accent} opacity="0.08" />
-                        <circle cx="32" cy="24" r="8"  fill={cv.accent} opacity="0.15" />
-                        <path d="M24 40 Q22 50 32 52 Q42 50 40 40 Q36 38 32 38 Q28 38 24 40Z" fill={cv.accent} opacity="0.1" />
-                      </svg>
-                      <span className="text-xs font-inter text-slate-400 mt-4">Premium LED Illumination</span>
+                <div className="flex gap-3">
+                  {/* Main image */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="relative flex-1 aspect-square rounded-3xl overflow-hidden shadow-md flex items-center justify-center p-8 group border border-slate-100"
+                    style={{ background: `radial-gradient(circle at center, #FFFFFF 30%, ${cv.light} 100%)` }}
+                  >
+                    {displayImg && !imgError ? (
+                      <img
+                        src={displayImg}
+                        alt={`${product.name} – ${product.wattage || ''} ${product.category} – DIYAM India`}
+                        onError={() => setImgError(true)}
+                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply"
+                        loading="eager"
+                        width="600"
+                        height="600"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center text-slate-300">
+                        <svg viewBox="0 0 64 64" fill="none" width="120" height="120">
+                          <circle cx="32" cy="24" r="14" fill={cv.accent} opacity="0.08" />
+                          <circle cx="32" cy="24" r="8"  fill={cv.accent} opacity="0.15" />
+                          <path d="M24 40 Q22 50 32 52 Q42 50 40 40 Q36 38 32 38 Q28 38 24 40Z" fill={cv.accent} opacity="0.1" />
+                        </svg>
+                        <span className="text-xs font-inter text-slate-400 mt-4">Premium LED Illumination</span>
+                      </div>
+                    )}
+
+                    {/* Badge */}
+                    <div className={`absolute top-6 left-6 ${cv.badge} text-xs font-inter font-bold tracking-wide uppercase px-3.5 py-1.5 rounded-full shadow-sm`}>
+                      {product.badge}
+                    </div>
+                  </motion.div>
+
+                  {/* Vertical thumbnail strip (right side, scrollable) */}
+                  {imgList.length > 1 && (
+                    <div className="flex flex-col gap-2 overflow-y-auto max-h-[420px]" style={{ scrollbarWidth: 'thin' }}>
+                      {imgList.map((src, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => { setSelectedImg(src); setImgError(false); }}
+                          className={`w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-200 ${
+                            displayImg === src
+                              ? 'border-green-500 shadow-md scale-105'
+                              : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400'
+                          }`}
+                          aria-label={`View image ${idx + 1}`}
+                        >
+                          <img
+                            src={src}
+                            alt={`${product.name} view ${idx + 1}`}
+                            className="w-full h-full object-contain bg-slate-50"
+                          />
+                        </button>
+                      ))}
                     </div>
                   )}
-
-                  {/* Badge */}
-                  <div className={`absolute top-6 left-6 ${cv.badge} text-xs font-inter font-bold tracking-wide uppercase px-3.5 py-1.5 rounded-full shadow-sm`}>
-                    {product.badge}
-                  </div>
-                </motion.div>
+                </div>
 
                 {/* Trust Badges */}
                 <div className="grid grid-cols-3 gap-3 mt-6">
@@ -365,6 +405,20 @@ export default function ProductDetailPage() {
                   </svg>
                   <span>Enquire on WhatsApp</span>
                 </a>
+                {product.flipkart && (
+                  <a
+                    href={product.flipkart}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3.5 rounded-2xl border border-orange-200 text-orange-600 font-inter font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:bg-orange-50 transition-all duration-300"
+                    aria-label={`Buy ${product.name} on Flipkart`}
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
+                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span>Buy on Flipkart</span>
+                  </a>
+                )}
                 <Link
                   to="/products"
                   className="w-full py-3.5 rounded-2xl border border-slate-200 text-slate-500 font-inter font-bold text-xs tracking-wide flex items-center justify-center gap-1.5 hover:bg-slate-50 transition-all duration-300"

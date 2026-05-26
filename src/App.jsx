@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import WhatsAppButton from './components/WhatsAppButton'
+// import SmartAssistant from './components/SmartAssistant'
 import Home from './pages/Home'
 import AboutPage from './pages/AboutPage'
 import ProductsPage from './pages/ProductsPage'
@@ -43,6 +44,7 @@ export default function App() {
       <div className="min-h-screen bg-white text-gray-900">
         <Navbar />
         <AnimatedRoutes />
+        {/* <SmartAssistant /> */}
         <WhatsAppButton />
       </div>
     </BrowserRouter>
