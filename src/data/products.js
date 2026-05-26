@@ -11,7 +11,7 @@ const baseProducts = [
   {
     id: 103,
     slug: 'diyam-premium-focus-light-30w-recessed-smart-led',
-    name: 'DIYAM Premium Focus Light 30W',
+    name: 'DIYAM Tunable Premium Focus Light 30W',
     category: 'LED Focus Light',
     price: 'Contact Me',
     badge: '30W Smart',
@@ -41,7 +41,7 @@ const baseProducts = [
   {
     id: 108,
     slug: 'diyam-smart-track-light-30w-tunable-wifi-bluetooth',
-    name: 'DIYAM Smart Track Light 30W',
+    name: 'DIYAM Tunable Smart Track Light 30W',
     category: 'LED Track Light',
     price: 'Contact Me',
     badge: '30W Smart',
@@ -58,8 +58,9 @@ const baseProducts = [
     lightType: 'LED',
     warranty: '1 Year',
     description: 'DIYAM 30W Smart Track Light with Wi-Fi & Bluetooth connectivity. Features Tunable White technology — adjust colour temperature from Warm White to Cool White (2700K–6500K) with dimming control to suit any ambiance. Adjustable spotlight directs light precisely where needed. Sleek modern design in premium aluminium finish for contemporary interiors. High-efficiency LED delivers bright, uniform illumination with minimal energy consumption. Remote control included. Ideal for homes, offices, galleries, retail shops, and premium showrooms.',
-    image: '/products/Tracklight.png',
+    image: '/products/DiyamtunableTrackLight.jpeg',
     images: [
+      '/products/DiyamtunableTrackLight.jpeg',
       '/products/Tracklight.png',
       '/products/TACK LIGHTS FOTOSUTE.jpeg',
       '/products/Diyam track light front.jpeg',
