@@ -11,10 +11,14 @@ export default function SEO({
   faqSchema = null,
 }) {
   useEffect(() => {
-    const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://diyam.co.in';
-    const cleanOrigin = currentOrigin.endsWith('/') ? currentOrigin.slice(0, -1) : currentOrigin;
+    // Always use the production domain for canonical — never localhost
+    const productionOrigin = 'https://diyam.co.in';
     const cleanPath = path.startsWith('/') ? path : `/${path}`;
-    const canonicalUrl = `${cleanOrigin}${cleanPath === '/' ? '' : cleanPath}`;
+    // Homepage canonical = https://diyam.co.in/  (with trailing slash, matches index.html)
+    // Other pages       = https://diyam.co.in/products  (no trailing slash)
+    const canonicalUrl = cleanPath === '/'
+      ? `${productionOrigin}/`
+      : `${productionOrigin}${cleanPath}`;
 
     const baseTitle = 'DIYAM – Premium LED Focus Lights & Lighting Solutions India';
     const fullTitle = title ? `${title} | DIYAM` : baseTitle;
@@ -54,7 +58,7 @@ export default function SEO({
     setMeta('og:title', fullTitle, true);
     setMeta('og:description', description || defaultDesc, true);
     setMeta('og:url', canonicalUrl, true);
-    const absImage = image.startsWith('http') ? image : `${cleanOrigin}${image}`;
+    const absImage = image.startsWith('http') ? image : `${productionOrigin}${image}`;
     setMeta('og:image', absImage, true);
     setMeta('og:image:width', '1200', true);
     setMeta('og:image:height', '630', true);
@@ -94,7 +98,7 @@ export default function SEO({
         '@context': 'https://schema.org',
         '@type': 'Product',
         name: productSchema.name,
-        image: productSchema.image?.startsWith('http') ? productSchema.image : `${cleanOrigin}${productSchema.image}`,
+        image: productSchema.image?.startsWith('http') ? productSchema.image : `${productionOrigin}${productSchema.image}`,
         description: productSchema.description,
         category: productSchema.category,
         sku: `DIYAM-${productSchema.id}`,
