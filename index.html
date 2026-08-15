@@ -4,14 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ── Google Tag Manager ─────────────────────────────────────── -->
-    <!-- IMPORTANT: Replace GTM-XXXXXXX with your actual GTM Container ID -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-    <!-- End Google Tag Manager -->
+    <!-- ── Google Tag (GT-WKPDVKCT) + GA4 (G-E5L8YEST56) + Google Ads (AW-16589828947) ── -->
+    <!-- GT-WKPDVKCT is the unified Google Tag container that manages     -->
+    <!-- all connected destinations: GA4, Google Ads, etc.               -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-WKPDVKCT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Google Tag container – fires all connected products (GA4, Ads)
+      gtag('config', 'GT-WKPDVKCT');
+
+      // Google Ads Destination
+      gtag('config', 'AW-16589828947');
+
+      // GA4 – Explicit Measurement ID with enhanced config
+      gtag('config', 'G-E5L8YEST56', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true,
+        anonymize_ip: true        // GDPR-friendly
+      });
+    </script>
+    <!-- End Google Tag -->
 
     <!-- ── Primary SEO Meta Tags ──────────────────────────────────── -->
     <title>DIYAM – Premium LED Focus Lights, Spotlights & Lighting Solutions India | diyam.co.in</title>
@@ -226,28 +242,6 @@
     <!-- Get it from: https://search.google.com/search-console → Add Property → HTML tag method -->
     <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GSC_VERIFICATION_TOKEN" />
 
-    <!-- ── Google Tag (GT-WKPDVKCT) + GA4 (G-E5L8YEST56) ──────────── -->
-    <!-- GT-WKPDVKCT is the unified Google Tag container that manages     -->
-    <!-- all connected destinations: GA4, Google Ads, etc.               -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-WKPDVKCT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      // Google Tag container – fires all connected products (GA4, Ads)
-      gtag('config', 'GT-WKPDVKCT');
-
-      // GA4 – Explicit Measurement ID with enhanced config
-      gtag('config', 'G-E5L8YEST56', {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true,
-        anonymize_ip: true        // GDPR-friendly
-      });
-    </script>
-    <!-- End Google Tag -->
-
     <!-- ── Performance: Preconnect & Font Loading ─────────────────── -->
     <!-- Preconnect to Google Tag infrastructure -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -257,12 +251,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <!-- ── Google Tag Manager (noscript fallback) ───────────────────── -->
-    <!-- IMPORTANT: Replace GTM-XXXXXXX with your actual GTM Container ID -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
